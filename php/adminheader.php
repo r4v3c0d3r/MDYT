@@ -1,8 +1,6 @@
 <header>
-	<div class="editable">
-		<div id="logo">
-			<h1>Martin Dytrych</h1>
-		</div>
+	<div id="logo" class="editable">
+		<?php echo fetchContent("logo"); ?>		
 	</div>
 	<nav>
 		<ul>

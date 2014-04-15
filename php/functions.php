@@ -19,6 +19,5 @@ function verifyUser($jmeno, $heslo) {
 	} else {
 		return false;
 	}
-
 }
 ?>

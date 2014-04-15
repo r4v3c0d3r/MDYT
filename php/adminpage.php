@@ -26,8 +26,8 @@
 							<div class="slideimage" style="background-image: url('galerie/ban2.jpg')">
 								<a href="#1">
 								<div class="overlay">
-									<div class="titleakce editable">
-										Administrace only!
+									<div id="akce1" class="titleakce editable">
+										<?php echo fetchContent("akce1"); ?>		
 									</div>
 								</div> </a>
 							</div>
