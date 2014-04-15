@@ -194,8 +194,6 @@
 						<h5>Email</h5>
 						<p>
 							email@mdyt.cz
-							<br>
-							mdyt@centrum.cz
 						</p>
 					</div>
 					<div class="kontaktbox" id="adresa">
