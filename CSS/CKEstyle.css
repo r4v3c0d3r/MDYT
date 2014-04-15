@@ -1,0 +1,304 @@
+/* line 4, ../sass/CKEstyle.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+}
+
+/* line 7, ../sass/CKEstyle.scss */
+h1 {
+  padding: 0px 0px 0px 0px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* line 12, ../sass/CKEstyle.scss */
+h2, h3 {
+  padding: 20px 0px 20px 0px;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/* line 17, ../sass/CKEstyle.scss */
+h4 {
+  padding: 0px 0px 20px 0px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+/* line 22, ../sass/CKEstyle.scss */
+h5 {
+  padding: 0px 0px 0px 0px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+/* line 28, ../sass/CKEstyle.scss */
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+/* line 34, ../sass/CKEstyle.scss */
+body {
+  background-color: #282828;
+}
+
+/* line 37, ../sass/CKEstyle.scss */
+section {
+  width: 960px;
+  display: inline-block;
+  /*box-sizing: border-box;*/
+  /*SUPER TECH, ALE PODPORA NAHOVNO :( */
+  float: left;
+  padding: 60px 20px 20px 20px;
+}
+
+/* line 45, ../sass/CKEstyle.scss */
+#page {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 49, ../sass/CKEstyle.scss */
+header {
+  width: 960px;
+  padding: 20px 20px 0px 20px;
+  height: 40px;
+  /*background-color: rgba(0, 0, 0, 0.0);*/
+  background-color: #282828;
+  /*background-color: transparent;*/
+  position: fixed;
+  z-index: 9001;
+  /*hehe this will be fun */
+}
+
+/* line 59, ../sass/CKEstyle.scss */
+#logo {
+  float: left;
+  color: #FFFFFF;
+}
+
+/* line 63, ../sass/CKEstyle.scss */
+nav {
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* line 68, ../sass/CKEstyle.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 71, ../sass/CKEstyle.scss */
+nav ul li {
+  float: left;
+}
+
+/* line 75, ../sass/CKEstyle.scss */
+nav ul li a {
+  display: block;
+  margin-left: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #ede1e1;
+}
+
+/* line 84, ../sass/CKEstyle.scss */
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/* line 88, ../sass/CKEstyle.scss */
+nav ul li.selected a {
+  color: #00ff00;
+}
+
+/* line 92, ../sass/CKEstyle.scss */
+#onas {
+  background-color: #313131;
+  color: #FFFFFF;
+  padding: 60px 20px 80px 20px;
+  margin-top: -30px;
+}
+
+/* line 98, ../sass/CKEstyle.scss */
+.dvasloupce {
+  column-count: 2;
+  column-gap: 60px;
+  -webkit-column-gap: 60px;
+  -webkit-column-count: 2;
+  text-align: justify;
+}
+
+/* line 105, ../sass/CKEstyle.scss */
+.infobox {
+  float: left;
+  width: 50%;
+  padding: 20px 0px 20px 0px;
+}
+
+/* line 110, ../sass/CKEstyle.scss */
+.subinfobox {
+  padding: 0px 20px 20px 220px;
+  text-align: justify;
+}
+
+/* line 114, ../sass/CKEstyle.scss */
+#nabidka {
+  background-color: #ffffff;
+  color: #313131;
+  overflow: visible;
+}
+
+/* line 120, ../sass/CKEstyle.scss */
+#nabidka img {
+  float: left;
+}
+
+/* line 124, ../sass/CKEstyle.scss */
+#galerie {
+  color: #FFFFFF;
+  background-color: #313131;
+  height: 900px;
+}
+
+/* line 129, ../sass/CKEstyle.scss */
+#nadpisgalerie {
+  margin: 0px -20px 0px -20px;
+  padding-top: 0px;
+  height: 70px;
+  text-align: center;
+  background-color: #313131;
+  color: #FFFFFF;
+}
+
+/* line 137, ../sass/CKEstyle.scss */
+#obsahgalerie {
+  height: 100%;
+  background-color: #FFFFFF;
+  margin: 0px -20px 0px -20px;
+  color: #313131;
+}
+
+/* line 143, ../sass/CKEstyle.scss */
+.obrazek {
+  width: 33%;
+  float: left;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+/* line 149, ../sass/CKEstyle.scss */
+#kontakt {
+  width: 100%;
+  text-align: center;
+  background-color: #313131;
+  color: #FFFFFF;
+  height: 660px;
+}
+
+/* line 156, ../sass/CKEstyle.scss */
+.kontaktniinformace {
+  padding: 40px 20px 20px 20px;
+  float: left;
+}
+
+/* line 160, ../sass/CKEstyle.scss */
+.kontaktbox {
+  width: 200px;
+  height: 60px;
+  padding-left: 100px;
+  margin-bottom: 40px;
+  background-position: left;
+  text-align: left;
+  background-repeat: no-repeat;
+}
+
+/* line 169, ../sass/CKEstyle.scss */
+.kontaktbox p {
+  margin-top: 10px;
+}
+
+/* line 172, ../sass/CKEstyle.scss */
+#telefon {
+  background-image: url("/img/icon_mobil.png");
+}
+
+/* line 175, ../sass/CKEstyle.scss */
+#email {
+  background-image: url("/img/icon_email.png");
+}
+
+/* line 178, ../sass/CKEstyle.scss */
+#adresa {
+  background-image: url("/img/icon_home.png");
+}
+
+/* line 181, ../sass/CKEstyle.scss */
+#kontakt .formular {
+  width: 50%;
+  float: right;
+  padding: 40px 20px 20px 20px;
+}
+
+/* line 186, ../sass/CKEstyle.scss */
+#kontakt input {
+  width: 90%;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  color: #8c8c8c;
+}
+
+/* line 194, ../sass/CKEstyle.scss */
+#velkevstupnipole {
+  width: 90%;
+  padding: 8px 8px 8px 8px;
+  height: 200px;
+  resize: vertical;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  color: #8c8c8c;
+}
+
+/* line 204, ../sass/CKEstyle.scss */
+#kontakt #odeslat {
+  float: right;
+  margin-right: 16px;
+  width: 80px;
+  background-color: #c7534d;
+  color: #FFFFFF;
+  border: none;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* line 214, ../sass/CKEstyle.scss */
+#paticka {
+  width: 100%;
+  height: 160px;
+}
+
+/* line 218, ../sass/CKEstyle.scss */
+a {
+  font-family: 'Open Sans', sans-serif;
+  color: #00FF00;
+  /*lime*/
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+/* line 224, ../sass/CKEstyle.scss */
+.error {
+  position: relative;
+  font-size: 36px;
+  color: red;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 90000;
+}
