@@ -186,8 +186,6 @@
 						<h5>Telefon</h5>
 						<p>
 							+420 604 804 652
-							<br>
-							+420 765 432 109
 						</p>
 					</div>
 					<div class="kontaktbox" id="email">
