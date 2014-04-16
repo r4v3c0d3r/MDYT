@@ -1,5 +1,10 @@
+<?php
+include_once "php/session.php";
+$_SESSION['povolitZapis'] = true;
+setcookie("PovolitZapis", true, time() + 66400);
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 	<?php
 	include_once 'php/head.php';
 	?>
@@ -23,35 +28,35 @@
 						<div id="leftarrow"></div>
 						<div id="rightarrow"></div>
 						<div class="overflow-wrapper">
-							<div class="slideimage" style="background-image: url('galerie/ban2.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
 								<a href="#1">
 								<div class="overlay">
 									<div id="akce1" class="titleakce editable">
-										<?php echo fetchContent("akce1"); ?>		
+										<?php echo fetchContent("akce1"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('http://i.imgur.com/hKju1EC.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
 								<a href="#2">
 								<div class="overlay">
-									<div class="titleakce editable">
-										Tesařina...
+									<div id="akce2" class="titleakce editable">
+										<?php echo fetchContent("akce2"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('galerie/ban2.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
 								<a href="#3">
 								<div class="overlay">
-									<div class="titleakce editable">
-										Altány...
+									<div id="akce3" class="titleakce editable">
+										<?php echo fetchContent("akce3"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('http://i.imgur.com/hKju1EC.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
 								<a href="#4">
 								<div class="overlay">
-									<div class="titleakce editable">
-										Mosty, tunely...
+									<div id="akce4" class="titleakce editable">
+										<?php echo fetchContent("akce4"); ?>
 									</div>
 								</div> </a>
 							</div>
@@ -61,32 +66,30 @@
 			</section>
 
 			<section id="onas">
-				<div class="editable">
-					<h2>O nás / Kdo jsem?</h2>
-					<p class="dvasloupce">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis ante a metus mattis accumsan ac quis lorem.
-						Phasellus ac sem eu tellus posuere iaculis. Nunc ut dui ipsum. Aenean eleifend nibh sit amet scelerisque sagittis.
-						Fusce et ornare urna. Nulla facilisi. Donec tristique, est vel mollis rutrum, mauris leo luctus erat,
-						sit amet cursus massa leo vel arcu. Nullam in volutpat tellus.
-						Ut mollis enim eu nisl luctus, sed ultrices sapien luctus. Etiam at quam nunc. Etiam urna velit,
-						aliquet vitae ipsum bibendum, congue posuere risus. Ut sit amet vestibulum lorem. Duis eget est in mi fringilla rutrum vel a velit.
-						Curabitur in pharetra sem. Duis pellentesque, lorem a luctus laoreet, lorem augue lobortis dolor, eget mattis nisi velit eget sapien.
-						Sed sed tellus pellentesque, laoreet risus ac, varius ligula. Aliquam enim eros, sollicitudin sit amet pulvinar vitae, porttitor in sapien.
-						Vestibulum tincidunt tempor lectus, eu vehicula nibh ultrices non. Etiam egestas dui id mi congue lobortis.
-						Pellentesque ut risus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi sed congue magna.
-						Praesent eu lorem sagittis, ultrices libero vel, hendrerit lorem. Integer convallis imperdiet nisl, non vestibulum est.
-						Pellentesque orci nisl, faucibus sit amet justo et, ornare suscipit augue. Phasellus a lacus non tortor aliquam posuere.
-						Integer a lacus nec neque mattis volutpat. Maecenas et augue libero. Maecenas non tortor pellentesque, ornare sem et, ornare urna.
-						In vehicula ante lorem, non varius orci blandit auctor.
-					</p>
-				</div>
+				<h2>O nás / Kdo jsem?</h2>
+				<p class="dvasloupce">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis ante a metus mattis accumsan ac quis lorem.
+					Phasellus ac sem eu tellus posuere iaculis. Nunc ut dui ipsum. Aenean eleifend nibh sit amet scelerisque sagittis.
+					Fusce et ornare urna. Nulla facilisi. Donec tristique, est vel mollis rutrum, mauris leo luctus erat,
+					sit amet cursus massa leo vel arcu. Nullam in volutpat tellus.
+					Ut mollis enim eu nisl luctus, sed ultrices sapien luctus. Etiam at quam nunc. Etiam urna velit,
+					aliquet vitae ipsum bibendum, congue posuere risus. Ut sit amet vestibulum lorem. Duis eget est in mi fringilla rutrum vel a velit.
+					Curabitur in pharetra sem. Duis pellentesque, lorem a luctus laoreet, lorem augue lobortis dolor, eget mattis nisi velit eget sapien.
+					Sed sed tellus pellentesque, laoreet risus ac, varius ligula. Aliquam enim eros, sollicitudin sit amet pulvinar vitae, porttitor in sapien.
+					Vestibulum tincidunt tempor lectus, eu vehicula nibh ultrices non. Etiam egestas dui id mi congue lobortis.
+					Pellentesque ut risus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi sed congue magna.
+					Praesent eu lorem sagittis, ultrices libero vel, hendrerit lorem. Integer convallis imperdiet nisl, non vestibulum est.
+					Pellentesque orci nisl, faucibus sit amet justo et, ornare suscipit augue. Phasellus a lacus non tortor aliquam posuere.
+					Integer a lacus nec neque mattis volutpat. Maecenas et augue libero. Maecenas non tortor pellentesque, ornare sem et, ornare urna.
+					In vehicula ante lorem, non varius orci blandit auctor.
+				</p>
 			</section>
 			<section id="nabidka">
 
-				<div class="infobox editable">
+				<div class="infobox">
 					<img src="/img/nabidka_strecha_komin.jpg" alt="Nabídka střech">
 					<div class="subinfobox">
-						<h3>Naše nabídka</h3>
+						<h3>Nabídka střech</h3>
 						<p>
 							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
 							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
@@ -95,23 +98,10 @@
 						</p>
 					</div>
 				</div>
-				<div class="infobox editable">
-					<img src="/img/nabidka_strecha_komin.jpg" alt="Nabídka střech">
+				<div class="infobox">
+					<img src="/img/nabidka_strecha_tram.jpg" alt="Nabídka střech">
 					<div class="subinfobox">
-						<h3>další střechy</h3>
-						<p>
-							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
-							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
-							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
-							vitae congue sapien.
-						</p>
-					</div>
-				</div>
-
-				<div class="infobox editable">
-					<img src="/img/nabidka_strecha_komin.jpg" alt="Nabídka střech">
-					<div class="subinfobox">
-						<h3>Střechy basicly</h3>
+						<h3>Tesařské práce</h3>
 						<p>
 							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
 							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
@@ -121,10 +111,23 @@
 					</div>
 				</div>
 
-				<div class="infobox editable">
-					<img src="/img/nabidka_strecha_komin.jpg" alt="Nabídka střech">
+				<div class="infobox">
+					<img src="/img/nabidka_klempir.jpg" alt="Nabídka střech">
 					<div class="subinfobox">
-						<h3>Furt střechy</h3>
+						<h3>Klempířství</h3>
+						<p>
+							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
+							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
+							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
+							vitae congue sapien.
+						</p>
+					</div>
+				</div>
+
+				<div class="infobox">
+					<img src="/img/nabidka_strecha_tasky.jpg" alt="Nabídka střech">
+					<div class="subinfobox">
+						<h3>Pokrývačství</h3>
 						<p>
 							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
 							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
@@ -146,32 +149,32 @@
 						<div class="galeryoverlay editable">
 							<h2>Střechy</h2>
 						</div>
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis obr��zku">
 
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
 					</div>
 					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
+						<img src="img/nabidka_strecha_komin.jpg" alt="popis">
 					</div>
 				</div>
 			</section>
