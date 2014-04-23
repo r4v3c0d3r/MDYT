@@ -2,7 +2,7 @@
  * @author Thebys
  */
 tinymce.init({
-	selector : "div.editable",
+	selector : ".editable",
 	language : "cs",
 	theme : "modern",
 	force_br_newlines : false,

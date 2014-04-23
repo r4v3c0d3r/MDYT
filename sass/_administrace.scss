@@ -38,3 +38,29 @@ text-align: left;
     font-style: normal;
     font-size: 16px;
 }
+#spravagalerie{
+  margin: 0 auto;
+background-color: $lightgrey;
+width: 100%;
+padding: 20px 20px 20px 20px;
+color: #FFFFFF;
+}
+.spravaAlba{
+  position: relative;
+  border: 2px solid lime;
+padding: 20px 20px 20px 20px;
+margin: 20px 0px;
+color: #FFFFFF;
+min-height: 140px;
+}
+.newimage{
+  position: absolute;
+  float: right;
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
+  height: 80px;
+  background-color: $darkgrey;
+  padding: 20px 20px 20px 20px;
+  
+}

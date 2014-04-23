@@ -64,24 +64,10 @@ setcookie("PovolitZapis", true, time() + 66400);
 					</div>
 				</div>
 			</section>
-
 			<section id="onas">
 				<h2>O nás / Kdo jsem?</h2>
-				<p class="dvasloupce">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis ante a metus mattis accumsan ac quis lorem.
-					Phasellus ac sem eu tellus posuere iaculis. Nunc ut dui ipsum. Aenean eleifend nibh sit amet scelerisque sagittis.
-					Fusce et ornare urna. Nulla facilisi. Donec tristique, est vel mollis rutrum, mauris leo luctus erat,
-					sit amet cursus massa leo vel arcu. Nullam in volutpat tellus.
-					Ut mollis enim eu nisl luctus, sed ultrices sapien luctus. Etiam at quam nunc. Etiam urna velit,
-					aliquet vitae ipsum bibendum, congue posuere risus. Ut sit amet vestibulum lorem. Duis eget est in mi fringilla rutrum vel a velit.
-					Curabitur in pharetra sem. Duis pellentesque, lorem a luctus laoreet, lorem augue lobortis dolor, eget mattis nisi velit eget sapien.
-					Sed sed tellus pellentesque, laoreet risus ac, varius ligula. Aliquam enim eros, sollicitudin sit amet pulvinar vitae, porttitor in sapien.
-					Vestibulum tincidunt tempor lectus, eu vehicula nibh ultrices non. Etiam egestas dui id mi congue lobortis.
-					Pellentesque ut risus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi sed congue magna.
-					Praesent eu lorem sagittis, ultrices libero vel, hendrerit lorem. Integer convallis imperdiet nisl, non vestibulum est.
-					Pellentesque orci nisl, faucibus sit amet justo et, ornare suscipit augue. Phasellus a lacus non tortor aliquam posuere.
-					Integer a lacus nec neque mattis volutpat. Maecenas et augue libero. Maecenas non tortor pellentesque, ornare sem et, ornare urna.
-					In vehicula ante lorem, non varius orci blandit auctor.
+				<p id="textonas" class="dvasloupce editable">
+					<?php echo fetchContent("textonas"); ?>
 				</p>
 			</section>
 			<section id="nabidka">
@@ -138,43 +124,60 @@ setcookie("PovolitZapis", true, time() + 66400);
 				</div>
 
 			</section>
+			<section id="spravagalerie">
+				<?php
+				include "php/spravaGalerie.php";
+				?>
+			</section>
 			<section id="galerie">
-
-				<div id="nadpisgalerie" class="editable">
+				<div class="nadpisgalerie editable">
 					<h2>Galerie</h2>
 				</div>
-
 				<div id="obsahgalerie">
-					<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-						<div class="galeryoverlay editable">
-							<h2>Střechy</h2>
+					<div class="album">
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+							<div class="galeryoverlay">
+								<div class="titlegalerie editable">
+									<h2>Dřevostavby</h2>
+								</div>
+							</div>
 						</div>
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obr��zku">
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
 
+						</div>
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+
+						</div>
 					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
+					<div class="album">
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+
+						</div>
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+							<div class="galeryoverlay">
+								<div class="titlegalerie editable">
+									<h2>Střechy</h2>
+								</div>
+							</div>
+						</div>
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+
+						</div>
 					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis ">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis">
+					<div class="album">
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+
+						</div>
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+
+						</div>
+						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
+							<div class="galeryoverlay">
+								<div class="titlegalerie editable">
+									<h2>Šrot</h2>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
