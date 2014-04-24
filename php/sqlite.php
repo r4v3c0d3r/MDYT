@@ -40,7 +40,8 @@ function fetchGaleriesManagement() {
 		$stmt -> execute();
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
-		foreach ($res as $galerie) {
+	//	foreach ($res as $galerie) {
+			$galerie = $res[0]; {
 			echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
 			$dbh = initSQLite();
 			$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
@@ -52,35 +53,45 @@ function fetchGaleriesManagement() {
 				echo '<div class="picwrap"></div>';
 			}
 			//upload new images to this album!
-			echo '<div class="picwrap newimage" id="' . $galerie['jmenogalerie'] . '">
-			<div class="picwrapoverflow"><form method="post" action="">
-			<input type="hidden" name="gid" value="' . $galerie['jmenogalerie'] . '">
+?>
+
+<div class="picwrap newimage">
+	<div class="picwrapoverflow">
+		<form class="imageUpload" id="<?=$galerie['jmenogalerie'] ?>" enctype="multipart/form-data">
+			<input type="hidden" name="gid" value="<?=$galerie['gid'] ?>">
 			<h3>Nahrát obrázky:</h3>
-			<input type="file" name="myfiles" multiple="multiple"><br>
-			<input type="button" value="Nahrát soubory" onclick="startUpload()" >
-			</form></div></div>';
-			echo '</div>';
-		}
-	} catch(exception $e) {
-		print 'Exception : ' . $e -> getMessage();
-	}
+			<!--<input type="file" name="myfiles" multiple="multiple">-->
+			<input name="file" type="file">
+			<br>
+			<input name="button" type="button" value="Upload">
+			
+		</form>
+		<progress></progress>
+	</div>
+</div>
+</div>
+<?php
+}
+} catch(exception $e) {
+print 'Exception : ' . $e -> getMessage();
+}
 }
 
 function saveContent($oidname, $content) {
-	try {
-		$dbh = new PDO('sqlite:db/mdytdb');
-		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	} catch(PDOException $e) {
-		print 'Exception : ' . $e -> getMessage();
-	}
-	$stmt = $dbh -> prepare("UPDATE Obsah SET obsah = :content WHERE oidname = :oidname");
-	$stmt -> bindParam(':oidname', $oidname);
-	$stmt -> bindParam(':content', $content);
-	$stmt -> execute();
-	$rows = $stmt -> fetchAll();
-	terminateSQLite();
-	foreach ($rows as $row) {
-		return $row['obsah'];
-	}
+try {
+$dbh = new PDO('sqlite:db/mdytdb');
+$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+print 'Exception : ' . $e -> getMessage();
+}
+$stmt = $dbh -> prepare("UPDATE Obsah SET obsah = :content WHERE oidname = :oidname");
+$stmt -> bindParam(':oidname', $oidname);
+$stmt -> bindParam(':content', $content);
+$stmt -> execute();
+$rows = $stmt -> fetchAll();
+terminateSQLite();
+foreach ($rows as $row) {
+return $row['obsah'];
+}
 }
 ?>

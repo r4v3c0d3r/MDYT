@@ -27,4 +27,13 @@ tinymce.init({
 			//alert("Data Saved: " + msg);
 		});
 	}
+});/*
+tinymce.init({
+	selector : ".imageUpload",
+	plugins : ["image"],
+	file_browser_callback : function(field_name, url, type, win) {
+		if (type == 'image')
+			$('.imageUpload input').click();
+	}
 });
+*/

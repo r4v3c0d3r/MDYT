@@ -1,4 +1,7 @@
 <head>
+<?php
+define ('SITE_ROOT', realpath(dirname(__FILE__)));
+?>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title id="PageTitle"><?php echo fetchContent("PageTitle"); ?></title>
 	<link rel="stylesheet" href="CSS/screen.css">
@@ -10,7 +13,13 @@
 	<script type="text/javascript" src="JScript/ajax.js"></script>
 	<script type="text/javascript" src="JScript/fileupload.js"></script>
 	<script type="text/javascript" src="JScript/galerymanager.js"></script>
-	<script src="JScript/rotator.js"></script>
+	<script type="text/javascript" src="JScript/rotator.js"></script>
+	 <!-- Google web fonts -->
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+        <!-- The main CSS file -->
+        
+	
 
 	<!--[if lt IE 9]>
 	<script src="JScript/iefix.js"></script>
