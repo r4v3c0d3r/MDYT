@@ -159,7 +159,7 @@ setcookie("PovolitZapis", true, time() + 66400);
 			</section>
 			<section id="spravagalerie">
 				<?php
-				include "php/spravaGalerie.php";
+				include "spravaGalerie.php";				
 				?>
 			</section>
 			<section id="galerie">

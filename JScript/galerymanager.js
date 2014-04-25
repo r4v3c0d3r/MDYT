@@ -1,50 +1,84 @@
-$(document).ready(function() {
-
-	$(':file').change(function() {
-		/*
-		var formData = new FormData($('form')[0]);
-
-		var file = this.files[0];
-		var name = file.name;
-		var size = file.size;
-		var type = file.type;*/
-		//Your validation
-	});
-	//Now the Ajax submit with the button's click:
-
-	$(':button').click(function() {
-		var formData = new FormData($('form')[0]); //formulář, ne input!!!
-		$.ajax({
-			url : 'php/uploadimages.php', //Server script to process data
-			type : 'POST',
-			xhr : function() {// Custom XMLHttpRequest
-				var myXhr = $.ajaxSettings.xhr();
-				if (myXhr.upload) {// Check if upload property exists
-					myXhr.upload.addEventListener('progress', progressHandlingFunction, false);
-					// For handling the progress of the upload
+function uploadFiles() {
+	var xhr = new XMLHttpRequest();
+	function progressListener(e) {
+		console.log("progressListener: ", e);
+		if (e.lengthComputable) {
+			var percentage = Math.round((e.loaded * 100) / e.total);
+			progressBar(percentage);
+			console.log("Percentage loaded: ", percentage);
+		}
+	};
+	function finishUpload(e) {
+		progressBar(100);
+		console.log("Finished Percentage loaded: 100");
+	};
+	// XHR2 has an upload property with a 'progress' event
+	xhr.upload.addEventListener("progress", progressListener, false);
+	// XHR2 has an upload property with a 'load' event
+	xhr.upload.addEventListener("load", finishUpload, false);
+	// Begin uploading of file
+	xhr.open("POST", "upload.php");
+	xhr.onreadystatechange = function() {
+		console.info("readyState: ", this.readyState);
+		if (this.readyState == 4) {
+			if ((this.status >= 200 && this.status < 300) || this.status == 304) {
+				if (this.responseText != "") {
+					alert(xhr.responseText);
 				}
-				return myXhr;
-			},
-			//Ajax events
-			beforeSend : beforeSendHandler,
-			success : completeHandler,
-			error : errorHandler,
-			// Form data
-			data : formData,
-			//Options to tell jQuery not to process data or worry about content-type.
-			cache : false,
-			contentType : false,
-			processData : false
+			}
+		}
+	};
+	xhr.send(formdata);
+}
+
+
+$(document).ready(function() {
+	$(':file').change(function() {
+		//Případná validace
+	});
+	$(':button').click(function() {//bude asi potřeba relativizovat selekci, aby fungoval uploader u každý galerie...
+		var xhr = new XMLHttpRequest();
+		xhr.upload.addEventListener("progress", progressHandlingFunction, false);
+		xhr.upload.addEventListener("load", completeHandler, false);
+
+		var formData = new FormData();
+		formData.append('gid', $("input[name='gid']").val());
+		//může být nutná lepší selekce
+
+		var files = $("#fileinput")[0].files;
+		//možná budeme muset lépe selektovat soubory...
+		$(files).each(function() {
+			formData.append('files[]', this);
+			//files[] zařizuje, že to bude pole
 		});
+		xhr.open("POST", "php/uploadimages.php");
+		//URL skriptu
+		xhr.onreadystatechange = function() {
+			console.info("readyState: ", this.readyState);
+			if (this.readyState == 4) {
+				if ((this.status >= 200 && this.status < 300) || this.status == 304) {
+					if (this.responseText != "") {
+						alert(xhr.responseText);
+					}
+				}
+			}
+		};
+		xhr.send(formData);
 	});
 	//Now if you want to handle the progress.
-function beforeSendHandler(e){}
-function completeHandler(e){
-	alert(e);
-}
-function errorHandler(e){
-	alert(e);
-}
+	function beforeSendHandler(xhr) {
+		xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+	}
+
+	function completeHandler(e) {
+		alert("upload succes, update");
+		$('#spravagalerie').load("../spravaGalerie.php");
+	}
+
+	function errorHandler(e) {
+		alert(e);
+	}
+
 	function progressHandlingFunction(e) {
 		if (e.lengthComputable) {
 			$('progress').attr({

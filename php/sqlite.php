@@ -1,7 +1,8 @@
 <?php
 function initSQLite() {
+
 	try {
-		$dbh = new PDO('sqlite:db/mdytdb');
+		$dbh = new PDO('sqlite:'.$_SERVER["DOCUMENT_ROOT"].'/db/mdytdb');
 		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch(PDOException $e) {
 		print 'Exception : ' . $e -> getMessage();
@@ -34,6 +35,8 @@ function fetchContent($oidname) {
 function fetchGaleriesManagement() {
 	try {
 		$dbh = initSQLite();
+		//}
+		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$stmt = $dbh -> prepare('SELECT * FROM galerie WHERE povoleno');
 		//neat WHERE BOOL
 		//variabilizovat limit nebo něco
@@ -41,26 +44,28 @@ function fetchGaleriesManagement() {
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
 		//	foreach ($res as $galerie) {
-		$galerie = $res[0]; {
-			echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
-			$dbh = initSQLite();
-			$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
-			$stmt2 -> bindParam(':gid', $galerie['gid']);
-			$stmt2 -> execute();
-			$res2 = $stmt2 -> fetchAll();
-			terminateSQLite();
-			foreach ($res2 as $obrazek) {
-				echo '<div class="picwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
-				<div class="picwrapoverflow">
-				</div>
-				</div>';
-			}
-			include "addimage.php";
-			//upload new images to this album!
+		$galerie = $res[0];
+		//{
+		echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
+		$dbh = initSQLite();
+		$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
+		$stmt2 -> bindParam(':gid', $galerie['gid']);
+		$stmt2 -> execute();
+		$res2 = $stmt2 -> fetchAll();
+		terminateSQLite();
+		foreach ($res2 as $obrazek) {
+			echo '
+	<div class="picwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
+		<div class="picwrapoverflow"></div>
+	</div>';
 		}
+		include "addimage.php";
+		//upload new images to this album!
+		//	}
 	} catch(exception $e) {
 		print 'Exception : ' . $e -> getMessage();
 	}
+
 }
 
 function saveContent($oidname, $content) {
@@ -80,6 +85,7 @@ function saveContent($oidname, $content) {
 		return $row['obsah'];
 	}
 }
+
 function createImageRecord($gid, $url) {
 	try {
 		$dbh = new PDO('sqlite:../db/mdytdb');
@@ -89,11 +95,10 @@ function createImageRecord($gid, $url) {
 	}
 
 	$stmt = $dbh -> prepare("INSERT INTO obrazky (oid, gid, urlobrazku) VALUES (NULL, :gid, :urlobrazku)");
-   	$stmt -> bindParam(':gid', $gid);
+	$stmt -> bindParam(':gid', $gid);
 	$stmt -> bindParam(':urlobrazku', $url);
 	$stmt -> execute();
 	$rows = $stmt -> fetchAll();
 	terminateSQLite();
-echo "Record created.";
 }
 ?>
