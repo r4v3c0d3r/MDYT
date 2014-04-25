@@ -25,35 +25,35 @@ include_once 'php/header.php';
 						<div id="leftarrow"></div>
 						<div id="rightarrow"></div>
 						<div class="overflow-wrapper">
-							<div class="slideimage" style="background-image: url('galerie/ban2.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
 								<a href="#1">
 								<div class="overlay">
-									<div class="titleakce">
-										Střechy
+									<div id="akce1" class="titleakce">
+										<?php echo fetchContent("akce1"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('galerie/tes1.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
 								<a href="#2">
 								<div class="overlay">
-									<div class="titleakce">
-										Tesařské práce
+									<div id="akce2" class="titleakce">
+										<?php echo fetchContent("akce2"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('galerie/klem1.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
 								<a href="#3">
 								<div class="overlay">
-									<div class="titleakce">
-										Klempířské práce
+									<div id="akce3" class="titleakce">
+										<?php echo fetchContent("akce3"); ?>
 									</div>
 								</div> </a>
 							</div>
-							<div class="slideimage" style="background-image: url('galerie/alt1.jpg')">
+							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
 								<a href="#4">
 								<div class="overlay">
-									<div class="titleakce">
-										Altány a zahradní domky
+									<div id="akce4" class="titleakce">
+										<?php echo fetchContent("akce4"); ?>
 									</div>
 								</div> </a>
 							</div>
@@ -137,7 +137,7 @@ include_once 'php/header.php';
 			</section>
 			<section id="galerie">
 
-				<div id="nadpisgalerie">
+				<div class="nadpisgalerie">
 					<h2>Galerie</h2>
 				</div>
 

@@ -3,7 +3,7 @@
 header('Content-Type: text/plain; charset=utf-8');
 
 try {
-
+	//TODO multiupload yet to be done!
 	// Undefined | Multiple Files | $_FILES Corruption Attack
 	// If this request falls under any of them, treat it invalid.
 	if (!isset($_FILES['file']['error']) || is_array($_FILES['file']['error'])) {
@@ -38,9 +38,12 @@ try {
 	// DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
 	// On this example, obtain safe unique name from its binary data.
 	// DIAKRITIKA TAK UPLNĚ NEFUNGUJE, MOŽNÁ NA SERVERU - proto GID!
-	if (!move_uploaded_file($_FILES['file']['tmp_name'], sprintf('../galerie/%s/%s.%s',$_POST['gid'],sha1_file($_FILES['file']['tmp_name']),$ext))) {
+	$url = sprintf('../galerie/%s/%s.%s', $_POST['gid'], sha1_file($_FILES['file']['tmp_name']), $ext);
+	if (!move_uploaded_file($_FILES['file']['tmp_name'], $url)) {
 		throw new RuntimeException('Failed to move uploaded file.');
 	}
+	include_once "sqlite.php";
+	createImageRecord($_POST['gid'], $url);
 	//TODO - vytvořit thumby a db záznamy, poslat info a refreshnout galerii
 	echo 'Nahrávání uspělo!';
 
