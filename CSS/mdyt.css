@@ -221,14 +221,15 @@ nav ul li.selected a {
 
 /* line 172, ../sass/mdyt.scss */
 .thumboverlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.33);
+  background-color: rgba(0, 0, 0, 0.33);
   overflow: hidden;
-  text-align: center;
+  text-align: right;
+  padding: 6px 6px 6px 6px;
+  font-size: 24px;
+  color: red;
 }
 
-/* line 179, ../sass/mdyt.scss */
+/* line 180, ../sass/mdyt.scss */
 .galeryoverlay {
   min-height: 100%;
   width: 100%;
@@ -237,7 +238,7 @@ nav ul li.selected a {
   text-align: center;
 }
 
-/* line 186, ../sass/mdyt.scss */
+/* line 187, ../sass/mdyt.scss */
 .titlegalerie {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -246,7 +247,7 @@ nav ul li.selected a {
   margin: 0 auto;
 }
 
-/* line 193, ../sass/mdyt.scss */
+/* line 194, ../sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
@@ -255,13 +256,13 @@ nav ul li.selected a {
   height: 660px;
 }
 
-/* line 200, ../sass/mdyt.scss */
+/* line 201, ../sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 204, ../sass/mdyt.scss */
+/* line 205, ../sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -272,34 +273,34 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 213, ../sass/mdyt.scss */
+/* line 214, ../sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 216, ../sass/mdyt.scss */
+/* line 217, ../sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 219, ../sass/mdyt.scss */
+/* line 220, ../sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 222, ../sass/mdyt.scss */
+/* line 223, ../sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 225, ../sass/mdyt.scss */
+/* line 226, ../sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 230, ../sass/mdyt.scss */
+/* line 231, ../sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -309,7 +310,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 238, ../sass/mdyt.scss */
+/* line 239, ../sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -321,7 +322,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 248, ../sass/mdyt.scss */
+/* line 249, ../sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -333,13 +334,13 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 258, ../sass/mdyt.scss */
+/* line 259, ../sass/mdyt.scss */
 #paticka {
   width: 100%;
   height: 160px;
 }
 
-/* line 262, ../sass/mdyt.scss */
+/* line 263, ../sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -348,7 +349,7 @@ a {
   margin: 0 auto;
 }
 
-/* line 268, ../sass/mdyt.scss */
+/* line 269, ../sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;

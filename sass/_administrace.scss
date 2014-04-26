@@ -53,6 +53,22 @@ min-height: 140px;
 color: #FFFFFF;
 text-align: center;
 }
+.button{
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: Pointer;
+  margin-right: 10px;
+  padding: 2px;
+  border: 2px solid rgba(155, 155, 155, 0.8);
+  background-color: rgba(0, 0, 0, 1.0);
+}
+.red{
+  color:red;
+}
+.yellow{
+  color: yellow;
+}
 .spravaAlba h3{
   padding-top: 40px;
 clear: left;

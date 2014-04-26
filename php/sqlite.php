@@ -55,8 +55,8 @@ function fetchGaleriesManagement() {
 				foreach ($res2 as $obrazek) {
 					echo '
 	<div class="thumbwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
+			<div class="thumboverlay"><div class="button yellow" id="EDIT' . $obrazek['oid'] . '" data-oid="' . $obrazek['oid'] . '">E</div><div class="button red" id="DELETE' . $obrazek['oid'] . '" data-oid="' . $obrazek['oid'] . '">X</div></div>
 		</div>';
-					//<div class="thumboverlay"></div>
 				}
 				echo "</div>";
 				//upload new images to this album!

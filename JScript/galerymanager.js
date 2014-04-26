@@ -31,8 +31,22 @@ function uploadFiles() {
 	xhr.send(formdata);
 }
 
+function deletePhoto(oid) {
+	alert("jop:" + oid);
+}
+
 
 $(document).ready(function() {
+	$("[id^=EDIT]").click(function(event) {
+		alert("editace: "+$(this).data('oid'));
+
+	});
+	$("[id^=DELETE]").click(function(event) {
+		if (confirm('Opdravdu smazat?')) {
+			deletePhoto($(this).data('oid'));
+		}
+	});
+
 	$(':file').change(function() {
 		//Případná validace
 	});
@@ -46,7 +60,7 @@ $(document).ready(function() {
 		//může být nutná lepší selekce
 
 		var files = $("#fileinput")[0].files;
-		//možná budeme muset lépe selektovat soubory...
+		//možná budeme muset lépe selektovat soubory... z jiných formulářů... tohle by mohlo zabrat
 		$(files).each(function() {
 			formData.append('files[]', this);
 			//files[] zařizuje, že to bude pole
