@@ -44,7 +44,7 @@ function fetchGaleriesManagement() {
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
 		foreach ($res as $galerie) { {
-				echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
+				echo '<div class="spravaAlba" id="' . $galerie['gid'] . '"><h3>' . $galerie['jmenogalerie'] . '</h3>';
 				include "addimage.php";
 				$dbh = initSQLite();
 				$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");

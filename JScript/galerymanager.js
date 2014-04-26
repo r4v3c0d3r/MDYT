@@ -53,6 +53,12 @@ function updatePhoto(oid) {
 	}
 }
 
+function getFormIndex(that) {
+	//přemapuje gid na fid :)
+	//hledá do kterýho divu správaalba tohle talčítko patří, protože je to důležitý.
+	return $(that).parent().parent().parent().index();
+}
+
 
 $(document).ready(function() {
 	$(document.body).on('click', "[id^=EDIT]", function(event) {
@@ -63,19 +69,22 @@ $(document).ready(function() {
 		deletePhoto($(this).data('oid'));
 	});
 
-	$(':file').change(function() {
+	$(document.body).on('change', ':file', function() {
 		//Případná validace
 	});
-	$(':button').click(function() {//bude asi potřeba relativizovat selekci, aby fungoval uploader u každý galerie...
+	$(document.body).on('click', ':button', function() {//bude asi potřeba relativizovat selekci, aby fungoval uploader u každý galerie...
+
 		var xhr = new XMLHttpRequest();
 		xhr.upload.addEventListener("progress", progressHandlingFunction, false);
 		xhr.upload.addEventListener("load", completeHandler, false);
-
+		var activeFormIndex = getFormIndex(this) - 1;
+		var gid = $(this).attr("id");
 		var formData = new FormData();
-		formData.append('gid', $("input[name='gid']").val());
-		//může být nutná lepší selekce
+		formData.append('gid', gid);
+		//alert("AFI: "+activeFormIndex+" --- GID: "+gid);
+		//může být nutná lepší selekce - $(this).attr('gid')
 
-		var files = $("#fileinput")[0].files;
+		var files = $(".fileinput")[activeFormIndex].files;
 		//možná budeme muset lépe selektovat soubory... z jiných formulářů... tohle by mohlo zabrat
 		$(files).each(function() {
 			formData.append('files[]', this);
@@ -101,8 +110,12 @@ $(document).ready(function() {
 	}
 
 	function completeHandler(e) {
-		alert("upload succes, update");
-		$('#spravagalerie').load("../spravaGalerie.php");
+		//upload success
+		//refresh galery manager maybe album would be sufficient? :P
+		alert("Upload dokončen.");
+		setTimeout(function() {
+			$('#spravagalerie').load("../spravaGalerie.php");
+		}, 200);
 	}
 
 	function errorHandler(e) {

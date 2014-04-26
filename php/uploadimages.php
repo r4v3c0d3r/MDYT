@@ -56,7 +56,12 @@ try {
 		// On this example, obtain safe unique name from its binary data.
 		// DIAKRITIKA TAK UPLNĚ NEFUNGUJE, MOŽNÁ NA SERVERU - proto GID!
 		$fileurl = sprintf('../galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
+		$folderurl = sprintf('../galerie/%s', $_POST['gid']);
 		$dburl = sprintf('galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
+
+		if (!is_dir($folderurl)) {
+			mkdir(dirname($folderurl), 0777, true); //UNTESTED
+		}
 		if (!move_uploaded_file($file['tmp_name'], $fileurl)) {
 			throw new RuntimeException('Failed to move uploaded file.');
 		}
