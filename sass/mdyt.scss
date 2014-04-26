@@ -161,12 +161,20 @@ nav ul li.selected a {
     margin: 20px 20px 20px 20px;
     background-repeat: no-repeat;
 }
-.picwrap{
-    width: 100px;
-    height: 100px;
-    margin: 10px 10px 10px 10px;
+.thumbwrap{
+    width: 130px;
+    height: 130px;
+    margin: 10px 10px;
     background-repeat: no-repeat;
     background-size: cover;
+    float: left;       
+}
+.thumboverlay{
+    width: 100%;
+    height: 100%;
+     background-color: rgba(255, 255, 255, 0.33);
+  overflow: hidden;
+  text-align: center;
 }
 .galeryoverlay{
   min-height: 100%;

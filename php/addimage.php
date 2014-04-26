@@ -1,13 +1,11 @@
-<div class="picwrap newimage">
-	<div class="picwrapoverflow">
+<div class="thumbwrap newimage">
 		<form class="imageUpload" id="imageform" method="POST" enctype="multipart/form-data">
 			<input type="hidden" name="gid" value="<?=$galerie['gid'] ?>">
-			<h3><?=$galerie['jmenogalerie'] ?> - Nahrát obrázky:</h3>
+			<h5><?=$galerie['jmenogalerie'] ?> - Nahrát obrázky:</h5>
 			<!--<input type="file" name="myfiles" multiple="multiple">-->
 			<input id="fileinput" name="files[]" type="file" multiple="multiple">
 			<br>
-			<input name="button" type="button" value="Upload">			
+			<input name="button" type="button" value="Nahrát!"><progress></progress>			
 		</form>
-		<progress></progress>
-	</div>
+		
 </div>

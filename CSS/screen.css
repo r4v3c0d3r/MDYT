@@ -276,15 +276,25 @@ nav ul li.selected a {
 }
 
 /* line 164, ../sass/mdyt.scss */
-.picwrap {
-  width: 100px;
-  height: 100px;
-  margin: 10px 10px 10px 10px;
+.thumbwrap {
+  width: 130px;
+  height: 130px;
+  margin: 10px 10px;
   background-repeat: no-repeat;
   background-size: cover;
+  float: left;
 }
 
-/* line 171, ../sass/mdyt.scss */
+/* line 172, ../sass/mdyt.scss */
+.thumboverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.33);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 179, ../sass/mdyt.scss */
 .galeryoverlay {
   min-height: 100%;
   width: 100%;
@@ -293,7 +303,7 @@ nav ul li.selected a {
   text-align: center;
 }
 
-/* line 178, ../sass/mdyt.scss */
+/* line 186, ../sass/mdyt.scss */
 .titlegalerie {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -302,7 +312,7 @@ nav ul li.selected a {
   margin: 0 auto;
 }
 
-/* line 185, ../sass/mdyt.scss */
+/* line 193, ../sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
@@ -311,13 +321,13 @@ nav ul li.selected a {
   height: 660px;
 }
 
-/* line 192, ../sass/mdyt.scss */
+/* line 200, ../sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 196, ../sass/mdyt.scss */
+/* line 204, ../sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -328,34 +338,34 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 205, ../sass/mdyt.scss */
+/* line 213, ../sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 208, ../sass/mdyt.scss */
+/* line 216, ../sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 211, ../sass/mdyt.scss */
+/* line 219, ../sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 214, ../sass/mdyt.scss */
+/* line 222, ../sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 217, ../sass/mdyt.scss */
+/* line 225, ../sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 222, ../sass/mdyt.scss */
+/* line 230, ../sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -365,7 +375,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 230, ../sass/mdyt.scss */
+/* line 238, ../sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -377,7 +387,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 240, ../sass/mdyt.scss */
+/* line 248, ../sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -389,13 +399,13 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 250, ../sass/mdyt.scss */
+/* line 258, ../sass/mdyt.scss */
 #paticka {
   width: 100%;
   height: 160px;
 }
 
-/* line 254, ../sass/mdyt.scss */
+/* line 262, ../sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -404,7 +414,7 @@ a {
   margin: 0 auto;
 }
 
-/* line 260, ../sass/mdyt.scss */
+/* line 268, ../sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;
@@ -474,28 +484,46 @@ a {
   width: 100%;
   padding: 20px 20px 20px 20px;
   color: #FFFFFF;
+  text-align: center;
 }
 
-/* line 48, ../sass/_administrace.scss */
+/* line 49, ../sass/_administrace.scss */
 .spravaAlba {
-  position: relative;
-  border: 2px solid lime;
-  padding: 20px 20px 20px 20px;
-  margin: 20px 0px;
-  color: #FFFFFF;
+  padding: 20px 20px 0px 20px;
+  min-width: 100%;
   min-height: 140px;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 /* line 56, ../sass/_administrace.scss */
+.spravaAlba h3 {
+  padding-top: 40px;
+  clear: left;
+  width: 100%;
+}
+
+/* line 62, ../sass/_administrace.scss */
 .newimage {
-  position: absolute;
-  float: right;
-  bottom: 0px;
-  right: 0px;
-  width: 200px;
-  height: 100px;
+  float: left;
+  width: 260px;
+  height: 120px;
   background-color: #282828;
-  padding: 20px 20px 20px 20px;
+  padding: 10px 10px 0px 10px;
+  text-align: justify;
+}
+
+/* line 70, ../sass/_administrace.scss */
+input[type=button] {
+  display: inline-block;
+  float: right;
+  margin-right: 16px;
+  width: 80px;
+  background-color: #c7534d;
+  color: #FFFFFF;
+  border: none;
+  font-style: normal;
+  font-size: 16px;
 }
 
 /* line 1, ../sass/_slider.scss */

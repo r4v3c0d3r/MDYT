@@ -44,23 +44,37 @@ background-color: $lightgrey;
 width: 100%;
 padding: 20px 20px 20px 20px;
 color: #FFFFFF;
+text-align: center;
 }
 .spravaAlba{
-  position: relative;
-  border: 2px solid lime;
-padding: 20px 20px 20px 20px;
-margin: 20px 0px;
-color: #FFFFFF;
+padding: 20px 20px 0px 20px;
+min-width: 100%;
 min-height: 140px;
+color: #FFFFFF;
+text-align: center;
 }
+.spravaAlba h3{
+  padding-top: 40px;
+clear: left;
+width: 100%;
+}
+
 .newimage{
-  position: absolute;
-  float: right;
-  bottom: 0px;
-  right: 0px;
-  width: 200px;
-  height: 100px;
+  float: left;
+  width: 260px;
+  height: 120px;
   background-color: $darkgrey;
-  padding: 20px 20px 20px 20px;
-  
+  padding: 10px 10px 0px 10px; 
+  text-align: justify; 
+}
+input[type=button]{
+  display: inline-block;
+     float: right;
+    margin-right: 16px;
+    width: 80px;
+    background-color: #c7534d;
+    color: #FFFFFF;
+    border: none;
+    font-style: normal;
+    font-size: 16px;
 }

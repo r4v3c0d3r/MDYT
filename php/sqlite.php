@@ -2,7 +2,7 @@
 function initSQLite() {
 
 	try {
-		$dbh = new PDO('sqlite:'.$_SERVER["DOCUMENT_ROOT"].'/db/mdytdb');
+		$dbh = new PDO('sqlite:' . $_SERVER["DOCUMENT_ROOT"] . '/db/mdytdb');
 		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch(PDOException $e) {
 		print 'Exception : ' . $e -> getMessage();
@@ -43,25 +43,25 @@ function fetchGaleriesManagement() {
 		$stmt -> execute();
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
-		//	foreach ($res as $galerie) {
-		$galerie = $res[0];
-		//{
-		echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
-		$dbh = initSQLite();
-		$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
-		$stmt2 -> bindParam(':gid', $galerie['gid']);
-		$stmt2 -> execute();
-		$res2 = $stmt2 -> fetchAll();
-		terminateSQLite();
-		foreach ($res2 as $obrazek) {
-			echo '
-	<div class="picwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
-		<div class="picwrapoverflow"></div>
-	</div>';
+		foreach ($res as $galerie) { {
+				echo '<div class="spravaAlba"><h3>' . $galerie['jmenogalerie'] . '</h3>';
+				include "addimage.php";
+				$dbh = initSQLite();
+				$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
+				$stmt2 -> bindParam(':gid', $galerie['gid']);
+				$stmt2 -> execute();
+				$res2 = $stmt2 -> fetchAll();
+				terminateSQLite();
+				foreach ($res2 as $obrazek) {
+					echo '
+	<div class="thumbwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
+		</div>';
+					//<div class="thumboverlay"></div>
+				}
+				echo "</div>";
+				//upload new images to this album!
+			}
 		}
-		include "addimage.php";
-		//upload new images to this album!
-		//	}
 	} catch(exception $e) {
 		print 'Exception : ' . $e -> getMessage();
 	}
