@@ -12,7 +12,7 @@ function initSQLite() {
 }
 
 function terminateSQLite() {
-	$dbh = NULL;
+	$dbh = null;
 }
 
 function fetchContent($oidname) {
@@ -100,5 +100,39 @@ function createImageRecord($gid, $url) {
 	$stmt -> execute();
 	$rows = $stmt -> fetchAll();
 	terminateSQLite();
+}
+
+function deleteImageRecord($oid) {
+	try {
+		$dbh = initSQLite();
+		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch(PDOException $e) {
+		print 'Exception : ' . $e -> getMessage();
+	}
+	$stmt = $dbh -> prepare("DELETE FROM obrazky WHERE oid = :oid");
+	$stmt -> bindParam(':oid', $oid);
+	$stmt -> execute();
+	$rows = $stmt -> fetchAll();
+	terminateSQLite();
+}
+
+function deleteImageFile($oid) {
+	try {
+		$dbh = initSQLite();
+		$stmt = $dbh -> prepare("SELECT urlobrazku FROM obrazky WHERE oid = :oid");
+		$stmt -> bindParam(':oid', $oid, PDO::PARAM_INT);
+		$stmt -> execute();
+		$res = $stmt -> fetchAll();
+		$picurl = realpath($res[0]['urlobrazku']);
+		if (is_readable($picurl)) {
+			unset($picurl);
+		} else {
+			echo "\nSoubor nejde smazat.";
+		}
+
+		terminateSQLite();
+	} catch(exception $e) {
+		print 'Exception : ' . $e -> getMessage();
+	}
 }
 ?>

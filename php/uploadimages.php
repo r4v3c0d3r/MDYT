@@ -55,12 +55,13 @@ try {
 		// DO NOT USE $_FILES['upfile']['name'] WITHOUT ANY VALIDATION !!
 		// On this example, obtain safe unique name from its binary data.
 		// DIAKRITIKA TAK UPLNĚ NEFUNGUJE, MOŽNÁ NA SERVERU - proto GID!
-		$url = sprintf('../galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
-		if (!move_uploaded_file($file['tmp_name'], $url)) {
+		$fileurl = sprintf('../galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
+		$dburl = sprintf('galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
+		if (!move_uploaded_file($file['tmp_name'], $fileurl)) {
 			throw new RuntimeException('Failed to move uploaded file.');
 		}
 		include_once "sqlite.php";
-		createImageRecord($_POST['gid'], $url);
+		createImageRecord($_POST['gid'], $dburl);
 		//TODO - vytvořit thumby, poslat info a refreshnout galerii
 	}
 

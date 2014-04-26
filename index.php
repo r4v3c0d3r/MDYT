@@ -5,8 +5,10 @@ include_once 'php/functions.php';
 
 if (isset($_POST["passphrase"])) {
 	if (verifyUser($_POST["username"], $_POST["passphrase"])) {
+		//unset($_REQUEST);
+		//unset($_POST);
 		include_once "php/adminpage.php";
-		$_POST = null;
+	
 	}
 } else {
 	include_once "php/page.php";

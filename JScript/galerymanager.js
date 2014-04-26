@@ -32,19 +32,35 @@ function uploadFiles() {
 }
 
 function deletePhoto(oid) {
-	alert("jop:" + oid);
+	if (confirm('Opdravdu smazat?')) {
+		$.post("spravaGalerie.php", {
+			oid : oid,
+			operation : "delete"
+		}, function(data) {
+			$('#spravagalerie').load("../spravaGalerie.php");
+		});
+	}
+}
+
+function updatePhoto(oid) {
+	if (confirm('Opdravdu upravit?')) {
+		$.post("spravaGalerie.php", {
+			oid : oid,
+			operation : "update"
+		}, function(data) {
+			alert(data);
+		});
+	}
 }
 
 
 $(document).ready(function() {
-	$("[id^=EDIT]").click(function(event) {
-		alert("editace: "+$(this).data('oid'));
+	$(document.body).on('click', "[id^=EDIT]", function(event) {
+		updatePhoto($(this).data('oid'));
 
 	});
-	$("[id^=DELETE]").click(function(event) {
-		if (confirm('Opdravdu smazat?')) {
-			deletePhoto($(this).data('oid'));
-		}
+	$(document.body).on('click', "[id^=DELETE]", function(event) {
+		deletePhoto($(this).data('oid'));
 	});
 
 	$(':file').change(function() {
