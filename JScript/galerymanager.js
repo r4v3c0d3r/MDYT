@@ -9,15 +9,26 @@ function updatePhoto(that, oid) {
 		dialog.css("visibility", "hidden");
 		$(that).css("background-color", "#000");
 	}
+}
 
-	/*if (confirm('Opdravdu upravit?')) {
-	 $.post("spravaGalerie.php", {
-	 oid : oid,
-	 operation : "update"
-	 }, function(data) {
-	 alert(data);
-	 });
-	 }*/
+function updateSave(that, obroid) {
+	var nadpis = $(that).prev().prev().val();
+	var podnadpis = $(that).prev().val();
+	$.post("spravaGalerie.php", {
+		oid : obroid,
+		novyNadpis : nadpis,
+		novyPodNadpis : podnadpis,
+		operation : "UpdateCaps"
+	}, function(data) {
+		//affirmation close :)
+		var dialog = $(that).parent().parent();
+		if ($(dialog).css("visibility") == "visible") {
+			$(".updatedialog:visible").css("visibility", "hidden");
+			$(".yellow").css("background-color", "#000");
+		}
+		//data jsou to co vrátí script, užitečnej debug
+		//alert("Uloženo. MSG: "+data);
+	});
 }
 
 function getFormIndex(that) {
@@ -30,6 +41,9 @@ function getFormIndex(that) {
 $(document).ready(function() {
 	$(document.body).on('click', "[id^=EDIT]", function(event) {
 		updatePhoto(this, $(this).data('oid'));
+	});
+	$(document.body).on('click', "[name=updateSave]", function(event) {
+		updateSave(this, $(this).attr('id'));
 
 	});
 	$(document.body).on('click', "[id^=DELETE]", function(event) {

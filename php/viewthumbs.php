@@ -24,7 +24,7 @@ function fetchThumbs($gid) {
 			<form method="POST" >
 			Nadpis: <input type="text" name="nadpisObrazku" value="' . $obrazek['nadpisObrazku'] . '">
 			Podnadpis: <input type="text" name="podnadpisObrazku" value="' . $obrazek['podnadpisObrazku'] . '">
-			<input type="button" value="Uložit">
+			<input type="button" name="updateSave" id="' . $obrazek['oid'] . '" value="Uložit">
 			</form>
 			</div>
 			</div>

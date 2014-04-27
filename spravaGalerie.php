@@ -5,13 +5,10 @@ if (isset($_POST['oid'])) {
 	if ($_POST['operation'] == "delete") {
 		deleteImageFile($oid);
 		deleteImageRecord($oid);
-		echo "Deleted oid:" . $_POST['oid'];
 	}
-	if ($_POST['operation'] == "update") {
-		echo "Update oid:" . $_POST['oid'];
+	if ($_POST['operation'] == "UpdateCaps") {
+		updateImageRecord($oid, $_POST['novyNadpis'], $_POST['novyPodNadpis']);
 	}
-	//AND OID exists
-	//delete record and file
 
 	die ;
 }

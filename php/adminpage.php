@@ -16,6 +16,7 @@ setcookie("PovolitZapis", true, time() + 66400);
 	<script type="text/javascript" src="JScript/fileupload.js"></script>
 	<script type="text/javascript" src="JScript/galerymanager.js"></script>
 	<script type="text/javascript" src="JScript/rotator.js"></script>
+	<script type="text/javascript" src="JScript/galerie.js"></script>
 	<!--[if lt IE 9]>
 	<script src="JScript/iefix.js"></script>
 	<div class="error">Používáte přestárlý prohlížeč, prosím <a href="http://www.browserchoice.eu/">aktualizujte jej</a>!</div>
@@ -159,7 +160,7 @@ setcookie("PovolitZapis", true, time() + 66400);
 			</section>
 			<section id="spravagalerie">
 				<?php
-				include "spravaGalerie.php";				
+				include "spravaGalerie.php";
 				?>
 			</section>
 			<section id="galerie">
@@ -167,51 +168,9 @@ setcookie("PovolitZapis", true, time() + 66400);
 					<h2>Galerie</h2>
 				</div>
 				<div id="obsahgalerie">
-					<div class="album">
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-							<div class="galeryoverlay">
-								<div class="titlegalerie editable">
-									<h2>Dřevostavby</h2>
-								</div>
-							</div>
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-					</div>
-					<div class="album">
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-							<div class="galeryoverlay">
-								<div class="titlegalerie editable">
-									<h2>Střechy</h2>
-								</div>
-							</div>
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-					</div>
-					<div class="album">
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-
-						</div>
-						<div class="obrazek" style="background-image: url('img/nabidka_strecha_komin.jpg');">
-							<div class="galeryoverlay">
-								<div class="titlegalerie editable">
-									<h2>Šrot</h2>
-								</div>
-							</div>
-						</div>
-					</div>
+								<?php
+								include "php/galerie.php";
+				?>					
 				</div>
 			</section>
 

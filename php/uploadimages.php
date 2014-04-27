@@ -41,7 +41,7 @@ try {
 		}
 
 		// You should also check filesize here.
-		if ($file['size'] > 2400000) {
+		if ($file['size'] > 12800000) {
 			throw new RuntimeException('Exceeded filesize limit.');
 		}
 

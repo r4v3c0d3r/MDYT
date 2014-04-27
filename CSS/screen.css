@@ -268,14 +268,15 @@ nav ul li.selected a {
 
 /* line 157, ../sass/mdyt.scss */
 .obrazek {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   float: left;
-  margin: 20px 20px 20px 20px;
+  margin: 10px 10px 10px 10px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* line 164, ../sass/mdyt.scss */
+/* line 165, ../sass/mdyt.scss */
 .thumbwrap {
   width: 130px;
   height: 130px;
@@ -285,7 +286,7 @@ nav ul li.selected a {
   float: left;
 }
 
-/* line 172, ../sass/mdyt.scss */
+/* line 173, ../sass/mdyt.scss */
 .thumboverlay {
   background-color: rgba(0, 0, 0, 0.33);
   overflow: hidden;
@@ -295,16 +296,16 @@ nav ul li.selected a {
   color: red;
 }
 
-/* line 180, ../sass/mdyt.scss */
+/* line 181, ../sass/mdyt.scss */
 .galeryoverlay {
   min-height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.33);
+  background-color: rgba(255, 255, 255, 0.7);
   overflow: hidden;
   text-align: center;
 }
 
-/* line 187, ../sass/mdyt.scss */
+/* line 188, ../sass/mdyt.scss */
 .titlegalerie {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -313,7 +314,7 @@ nav ul li.selected a {
   margin: 0 auto;
 }
 
-/* line 194, ../sass/mdyt.scss */
+/* line 195, ../sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
@@ -322,13 +323,13 @@ nav ul li.selected a {
   height: 660px;
 }
 
-/* line 201, ../sass/mdyt.scss */
+/* line 202, ../sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 205, ../sass/mdyt.scss */
+/* line 206, ../sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -339,34 +340,34 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 214, ../sass/mdyt.scss */
+/* line 215, ../sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 217, ../sass/mdyt.scss */
+/* line 218, ../sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 220, ../sass/mdyt.scss */
+/* line 221, ../sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 223, ../sass/mdyt.scss */
+/* line 224, ../sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 226, ../sass/mdyt.scss */
+/* line 227, ../sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 231, ../sass/mdyt.scss */
+/* line 232, ../sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -376,7 +377,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 239, ../sass/mdyt.scss */
+/* line 240, ../sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -388,7 +389,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 249, ../sass/mdyt.scss */
+/* line 250, ../sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -400,13 +401,13 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 259, ../sass/mdyt.scss */
+/* line 260, ../sass/mdyt.scss */
 #paticka {
   width: 100%;
   height: 160px;
 }
 
-/* line 263, ../sass/mdyt.scss */
+/* line 264, ../sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -415,7 +416,7 @@ a {
   margin: 0 auto;
 }
 
-/* line 269, ../sass/mdyt.scss */
+/* line 270, ../sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;
@@ -505,7 +506,7 @@ a {
   height: 80px;
   padding: 20px 20px;
   margin: 50px 0px 0px -100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   color: #fff;
   z-index: 11111;

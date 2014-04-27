@@ -130,6 +130,26 @@ function createImageRecord($gid, $url) {
 	terminateSQLite();
 }
 
+function updateImageRecord($oid, $novyNadpis, $novyPodNadpis) {
+	try {
+		$dbh = initSQLite();
+		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch(PDOException $e) {
+		print 'Exception : ' . $e -> getMessage();
+	}
+	$stmt = $dbh -> prepare("UPDATE obrazky SET nadpisObrazku = :nn, podnadpisObrazku = :pnn WHERE oid = :oid");
+	
+	$stmt -> bindParam(':oid', $oid, PDO::PARAM_INT);
+	$stmt -> bindParam(':nn', $novyNadpis);
+	$stmt -> bindParam(':pnn', $novyPodNadpis);
+	$stmt -> execute();
+	$rows = $stmt -> fetchAll();
+	terminateSQLite();
+	foreach ($rows as $row) {
+		return $row['obsah'];
+	}
+}
+
 function deleteImageRecord($oid) {
 	try {
 		$dbh = initSQLite();
