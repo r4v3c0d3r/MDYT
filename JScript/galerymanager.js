@@ -32,7 +32,7 @@ function uploadFiles() {
 }
 
 function deletePhoto(oid) {
-	if (confirm('Opdravdu smazat?')) {
+	if (confirm('Opdravdu smazat fotku?')) {
 		$.post("spravaGalerie.php", {
 			oid : oid,
 			operation : "delete"
@@ -42,15 +42,26 @@ function deletePhoto(oid) {
 	}
 }
 
-function updatePhoto(oid) {
-	if (confirm('Opdravdu upravit?')) {
-		$.post("spravaGalerie.php", {
-			oid : oid,
-			operation : "update"
-		}, function(data) {
-			alert(data);
-		});
+function updatePhoto(that, oid) {
+	var dialog = $(that).next().next();
+	if ($(dialog).css("visibility") == "hidden") {
+		$(".updatedialog:visible").css("visibility", "hidden");
+		$(".updatedialog:visible").prev().prev().css("background-color", "#000");
+		dialog.css("visibility", "visible");
+		$(that).css("background-color", "#0c0");
+	} else {
+		dialog.css("visibility", "hidden");
+		$(that).css("background-color", "#000");
 	}
+
+	/*if (confirm('Opdravdu upravit?')) {
+	 $.post("spravaGalerie.php", {
+	 oid : oid,
+	 operation : "update"
+	 }, function(data) {
+	 alert(data);
+	 });
+	 }*/
 }
 
 function getFormIndex(that) {
@@ -62,7 +73,7 @@ function getFormIndex(that) {
 
 $(document).ready(function() {
 	$(document.body).on('click', "[id^=EDIT]", function(event) {
-		updatePhoto($(this).data('oid'));
+		updatePhoto(this, $(this).data('oid'));
 
 	});
 	$(document.body).on('click', "[id^=DELETE]", function(event) {

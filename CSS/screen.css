@@ -498,6 +498,20 @@ a {
 }
 
 /* line 56, ../sass/_administrace.scss */
+.updatedialog {
+  position: absolute;
+  overflow: visible;
+  width: 300px;
+  height: 80px;
+  padding: 20px 20px;
+  margin: 50px 0px 0px -100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  color: #fff;
+  z-index: 11111;
+}
+
+/* line 68, ../sass/_administrace.scss */
 .button {
   display: inline-block;
   font-size: 24px;
@@ -509,24 +523,24 @@ a {
   background-color: black;
 }
 
-/* line 66, ../sass/_administrace.scss */
+/* line 78, ../sass/_administrace.scss */
 .red {
   color: red;
 }
 
-/* line 69, ../sass/_administrace.scss */
+/* line 81, ../sass/_administrace.scss */
 .yellow {
   color: yellow;
 }
 
-/* line 72, ../sass/_administrace.scss */
+/* line 84, ../sass/_administrace.scss */
 .spravaAlba h3 {
   padding-top: 40px;
   clear: left;
   width: 100%;
 }
 
-/* line 78, ../sass/_administrace.scss */
+/* line 90, ../sass/_administrace.scss */
 .newimage {
   float: left;
   width: 260px;
@@ -536,7 +550,7 @@ a {
   text-align: justify;
 }
 
-/* line 86, ../sass/_administrace.scss */
+/* line 98, ../sass/_administrace.scss */
 input[type=button] {
   display: inline-block;
   float: right;
