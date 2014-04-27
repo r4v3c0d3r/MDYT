@@ -31,6 +31,22 @@ function fetchContent($oidname) {
 	}
 }
 
+function fetchGalerie($gid) {
+	try {
+		$dbh = initSQLite();
+		$stmt = $dbh -> prepare("SELECT * FROM galerie WHERE gid = :gid");
+		$stmt -> bindParam(':gid', $gid);
+		$stmt -> execute();
+		$rows = $stmt -> fetchAll();
+		terminateSQLite();
+		foreach ($rows as $row) {
+			return $row['jmenogalerie'];
+		}
+	} catch(exception $e) {
+		print 'Exception : ' . $e -> getMessage();
+	}
+}
+
 //adminfce
 function fetchGaleriesManagement() {
 	try {
@@ -43,36 +59,16 @@ function fetchGaleriesManagement() {
 		$stmt -> execute();
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
+		include "addimage.php";
+		include "viewthumbs.php";
 		foreach ($res as $galerie) { {
-				echo '<div class="spravaAlba" id="' . $galerie['gid'] . '"><h3>' . $galerie['jmenogalerie'] . '</h3>';
-				include "addimage.php";
-				$dbh = initSQLite();
-				$stmt2 = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid");
-				$stmt2 -> bindParam(':gid', $galerie['gid']);
-				$stmt2 -> execute();
-				$res2 = $stmt2 -> fetchAll();
-				terminateSQLite();
-				foreach ($res2 as $obrazek) {
-					echo '
-	<div class="thumbwrap" style="background-image: url(\'' . $obrazek['urlobrazku'] . '\');">
-			<div class="thumboverlay">
-			<div class="button yellow" id="EDIT' . $obrazek['oid'] . '" data-oid="' . $obrazek['oid'] . '">
-			E
-			</div>
-			<div class="button red" id="DELETE' . $obrazek['oid'] . '" data-oid="' . $obrazek['oid'] . '">
-			X
-			</div>
-			<div class="updatedialog">
-			<form method="POST" >
-			Nadpis: <input type="text" name="nadpisObrazku" value="' . $obrazek['nadpisObrazku'] . '">
-			Podnadpis: <input type="text" name="podnadpisObrazku" value="' . $obrazek['podnadpisObrazku'] . '">
-			<input type="button" value="Uložit">
-			</form>
-			</div>
-			</div>
-		</div>';
-				}
-				echo "</div>";
+				echo '<div class="spravaAlba" id="' . $galerie['gid'] . '"><h3>' . fetchContent("galerie" . $galerie['gid']) . '</h3>';
+				echo '<div class="thumbwrap newimage">';
+				fetchNewImageForm($galerie['gid']);
+				echo '</div>';
+				echo '<div class="thumbs" id="' . $galerie['gid'] . '">';
+				fetchThumbs($galerie['gid']);
+				echo "</div></div>";
 				//upload new images to this album!
 			}
 		}
@@ -92,6 +88,24 @@ function saveContent($oidname, $content) {
 	$stmt = $dbh -> prepare("UPDATE Obsah SET obsah = :content WHERE oidname = :oidname");
 	$stmt -> bindParam(':oidname', $oidname);
 	$stmt -> bindParam(':content', $content);
+	$stmt -> execute();
+	$rows = $stmt -> fetchAll();
+	terminateSQLite();
+	foreach ($rows as $row) {
+		return $row['obsah'];
+	}
+}
+
+function saveGalerie($gid, $gname) {
+	try {
+		$dbh = new PDO('sqlite:db/mdytdb');
+		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch(PDOException $e) {
+		print 'Exception : ' . $e -> getMessage();
+	}
+	$stmt = $dbh -> prepare("UPDATE galerie SET jmenogalerie = :gname WHERE gid = :gid");
+	$stmt -> bindParam(':gid', $gid);
+	$stmt -> bindParam(':gname', $gname);
 	$stmt -> execute();
 	$rows = $stmt -> fetchAll();
 	terminateSQLite();

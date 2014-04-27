@@ -22,3 +22,4 @@ if (isset($_POST['oid'])) {
 <?php
 fetchGaleriesManagement();
 ?>
+

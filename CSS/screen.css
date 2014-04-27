@@ -483,14 +483,14 @@ a {
   margin: 0 auto;
   background-color: #313131;
   width: 100%;
-  padding: 20px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
   color: #FFFFFF;
   text-align: center;
 }
 
 /* line 49, ../sass/_administrace.scss */
 .spravaAlba {
-  padding: 20px 20px 0px 20px;
+  padding: 0px 20px 0px 20px;
   min-width: 100%;
   min-height: 140px;
   color: #FFFFFF;
@@ -548,19 +548,6 @@ a {
   background-color: #282828;
   padding: 10px 10px 0px 10px;
   text-align: justify;
-}
-
-/* line 98, ../sass/_administrace.scss */
-input[type=button] {
-  display: inline-block;
-  float: right;
-  margin-right: 16px;
-  width: 80px;
-  background-color: #c7534d;
-  color: #FFFFFF;
-  border: none;
-  font-style: normal;
-  font-size: 16px;
 }
 
 /* line 1, ../sass/_slider.scss */

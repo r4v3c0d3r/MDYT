@@ -60,7 +60,8 @@ try {
 		$dburl = sprintf('galerie/%s/%s.%s', $_POST['gid'], sha1_file($file['tmp_name']), $ext);
 
 		if (!is_dir($folderurl)) {
-			mkdir(dirname($folderurl), 0777, true); //UNTESTED
+			mkdir(dirname($folderurl), 0777, true);
+			//UNTESTED
 		}
 		if (!move_uploaded_file($file['tmp_name'], $fileurl)) {
 			throw new RuntimeException('Failed to move uploaded file.');

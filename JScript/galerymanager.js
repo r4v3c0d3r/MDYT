@@ -1,47 +1,3 @@
-function uploadFiles() {
-	var xhr = new XMLHttpRequest();
-	function progressListener(e) {
-		console.log("progressListener: ", e);
-		if (e.lengthComputable) {
-			var percentage = Math.round((e.loaded * 100) / e.total);
-			progressBar(percentage);
-			console.log("Percentage loaded: ", percentage);
-		}
-	};
-	function finishUpload(e) {
-		progressBar(100);
-		console.log("Finished Percentage loaded: 100");
-	};
-	// XHR2 has an upload property with a 'progress' event
-	xhr.upload.addEventListener("progress", progressListener, false);
-	// XHR2 has an upload property with a 'load' event
-	xhr.upload.addEventListener("load", finishUpload, false);
-	// Begin uploading of file
-	xhr.open("POST", "upload.php");
-	xhr.onreadystatechange = function() {
-		console.info("readyState: ", this.readyState);
-		if (this.readyState == 4) {
-			if ((this.status >= 200 && this.status < 300) || this.status == 304) {
-				if (this.responseText != "") {
-					alert(xhr.responseText);
-				}
-			}
-		}
-	};
-	xhr.send(formdata);
-}
-
-function deletePhoto(oid) {
-	if (confirm('Opdravdu smazat fotku?')) {
-		$.post("spravaGalerie.php", {
-			oid : oid,
-			operation : "delete"
-		}, function(data) {
-			$('#spravagalerie').load("../spravaGalerie.php");
-		});
-	}
-}
-
 function updatePhoto(that, oid) {
 	var dialog = $(that).next().next();
 	if ($(dialog).css("visibility") == "hidden") {
@@ -83,7 +39,7 @@ $(document).ready(function() {
 	$(document.body).on('change', ':file', function() {
 		//Případná validace
 	});
-	$(document.body).on('click', ':button', function() {//bude asi potřeba relativizovat selekci, aby fungoval uploader u každý galerie...
+	$(document.body).on('click', '[name="uploadbutton"]', function() {//bude asi potřeba relativizovat selekci, aby fungoval uploader u každý galerie...
 
 		var xhr = new XMLHttpRequest();
 		xhr.upload.addEventListener("progress", progressHandlingFunction, false);
@@ -123,14 +79,42 @@ $(document).ready(function() {
 	function completeHandler(e) {
 		//upload success
 		//refresh galery manager maybe album would be sufficient? :P
-		alert("Upload dokončen.");
-		setTimeout(function() {
-			$('#spravagalerie').load("../spravaGalerie.php");
-		}, 200);
+		refreshGaleryManager(e);
 	}
 
 	function errorHandler(e) {
 		alert(e);
+	}
+
+	function deletePhoto(oid) {
+		if (confirm('Opdravdu smazat fotku?')) {
+			$.post("spravaGalerie.php", {
+				oid : oid,
+				operation : "delete"
+			}, function(data) {
+				refreshGaleryManager();
+				//$('#spravagalerie').load("../spravaGalerie.php");
+			});
+		}
+	}
+
+	function refreshGaleryManager(that) {
+		$(".newimage").each(function() {
+			$(this).load("../php/addimage.php", {
+				gid : $(this).parent().attr("id"),
+				operace : "reloadform"
+			});
+		});
+		setTimeout(function() {
+			$(".thumbs").each(function() {
+				$(this).load("../php/viewthumbs.php", {
+					gid : $(this).attr("id"),
+					operace : "reload"
+				});
+			});
+			//DEPRECTED RELOAD WHOLE SECTION FUCKS UP TINYMCE ->UNINITABLE
+			//$('#spravagalerie').load("../spravaGalerie.php");
+		}, 800);
 	}
 
 	function progressHandlingFunction(e) {
