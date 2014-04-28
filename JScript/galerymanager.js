@@ -128,7 +128,7 @@ $(document).ready(function() {
 			});
 			//DEPRECTED RELOAD WHOLE SECTION FUCKS UP TINYMCE ->UNINITABLE
 			//$('#spravagalerie').load("../spravaGalerie.php");
-		}, 800);
+		}, 1200);
 	}
 
 	function progressHandlingFunction(e) {

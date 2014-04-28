@@ -63,100 +63,96 @@ setcookie("PovolitZapis", true, time() + 66400);
 						<div id="rightarrow"></div>
 						<div class="overflow-wrapper">
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
-								<a href="#1">
+							
 								<div class="overlay">
 									<div id="akce1" class="titleakce editable">
 										<?php echo fetchContent("akce1"); ?>
 									</div>
-								</div> </a>
+								</div> 
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
-								<a href="#2">
-								<div class="overlay">
+																<div class="overlay">
 									<div id="akce2" class="titleakce editable">
 										<?php echo fetchContent("akce2"); ?>
 									</div>
-								</div> </a>
+								</div>
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
-								<a href="#3">
+								
 								<div class="overlay">
 									<div id="akce3" class="titleakce editable">
 										<?php echo fetchContent("akce3"); ?>
 									</div>
-								</div> </a>
+								</div>
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
-								<a href="#4">
+								
 								<div class="overlay">
 									<div id="akce4" class="titleakce editable">
 										<?php echo fetchContent("akce4"); ?>
 									</div>
-								</div> </a>
+								</div> 
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section id="onas">
-				<h2>O nás / Kdo jsem?</h2>
+				<div class="editable" id="nadpisonas">
+				<?php echo fetchContent("nadpisonas"); ?>
+				</div>
 				<p id="textonas" class="dvasloupce editable">
 					<?php echo fetchContent("textonas"); ?>
 				</p>
 			</section>
 			<section id="nabidka">
-
 				<div class="infobox">
 					<img src="/img/nabidka_strecha_komin.jpg" alt="Nabídka střech">
 					<div class="subinfobox">
-						<h3>Nabídka střech</h3>
-						<p>
-							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
-							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
-							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
-							vitae congue sapien.
-						</p>
+									<div class="editable" id="nadpisnabidka1">
+				<?php echo fetchContent("nadpisnabidka1"); ?>
+				</div>
+						<p id="obsahnabidka1" class="editable">
+					<?php echo fetchContent("obsahnabidka1"); ?>
+				</p>						
 					</div>
 				</div>
 				<div class="infobox">
 					<img src="/img/nabidka_strecha_tram.jpg" alt="Nabídka střech">
-					<div class="subinfobox">
-						<h3>Tesařské práce</h3>
-						<p>
-							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
-							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
-							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
-							vitae congue sapien.
-						</p>
+						<div class="subinfobox">
+									<div class="editable" id="nadpisnabidka2">
+				<?php echo fetchContent("nadpisnabidka2"); ?>
+				</div>
+						<p id="obsahnabidka2" class="editable">
+					<?php echo fetchContent("obsahnabidka2"); ?>
+				</p>						
 					</div>
 				</div>
+				
 
 				<div class="infobox">
 					<img src="/img/nabidka_klempir.jpg" alt="Nabídka střech">
-					<div class="subinfobox">
-						<h3>Klempířství</h3>
-						<p>
-							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
-							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
-							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
-							vitae congue sapien.
-						</p>
+						<div class="subinfobox">
+									<div class="editable" id="nadpisnabidka3">
+				<?php echo fetchContent("nadpisnabidka3"); ?>
+				</div>
+						<p id="obsahnabidka3" class="editable">
+					<?php echo fetchContent("obsahnabidka3"); ?>
+				</p>						
 					</div>
 				</div>
-
+				
 				<div class="infobox">
 					<img src="/img/nabidka_strecha_tasky.jpg" alt="Nabídka střech">
-					<div class="subinfobox">
-						<h3>Pokrývačství</h3>
-						<p>
-							In hac habitasse platea dictumst. Donec iaculis enim quis porttitor tempor.
-							Nulla non volutpat dolor, mattis interdum mauris. Nulla nibh dolor, congue ac consectetur sodales,
-							lobortis eget libero. Maecenas commodo, metus vel vulputate porta, arcu libero sagittis quam,
-							vitae congue sapien.
-						</p>
+						<div class="subinfobox">
+									<div class="editable" id="nadpisnabidka4">
+				<?php echo fetchContent("nadpisnabidka4"); ?>
+				</div>
+						<p id="obsahnabidka4" class="editable">
+					<?php echo fetchContent("obsahnabidka4"); ?>
+				</p>						
 					</div>
 				</div>
-
 			</section>
 			<section id="spravagalerie">
 				<?php

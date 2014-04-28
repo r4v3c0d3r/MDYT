@@ -1,7 +1,7 @@
 function loadTinyMCE() {
 	window.tinymce.dom.Event.domLoaded = true;
 	tinymce.init({
-		selector : "div.editable",
+		selector : ".editable",
 		language : "cs",
 		theme : "modern",
 		force_br_newlines : false,

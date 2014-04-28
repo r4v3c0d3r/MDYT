@@ -3,14 +3,14 @@ include_once "php/session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<?php 
-include_once 'php/head.php';
-?>
+	<?php
+	include_once 'php/head.php';
+	?>
 	<body>
 		<div id="page">
-<?php 
-include_once 'php/header.php';
-?>
+			<?php
+			include_once 'php/header.php';
+			?>
 			<section id="akce">
 				<div id="slider-wrapper">
 					<div class="inner-wrapper" id="sliderControl">
@@ -136,39 +136,13 @@ include_once 'php/header.php';
 
 			</section>
 			<section id="galerie">
-
-				<div class="nadpisgalerie">
+				<div class="nadpisgalerie editable">
 					<h2>Galerie</h2>
 				</div>
-
 				<div id="obsahgalerie">
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
-					<div class="obrazek">
-						<img src="img/nabidka_strecha_komin.jpg" alt="popis obrázku">
-					</div>
+					<?php
+					include "php/galerie.php";
+					?>
 				</div>
 			</section>
 
