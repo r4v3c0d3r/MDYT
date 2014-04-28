@@ -8,6 +8,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="JScript/rotator.js"></script>
 	<script type="text/javascript" src="JScript/galerie.js"></script>
+	<script type="text/javascript" src="JScript/shadow/shadowbox.js"></script>
 	
 	<!--[if lt IE 9]>
 	<script src="JScript/iefix.js"></script>

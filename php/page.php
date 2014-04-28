@@ -26,7 +26,7 @@ include_once "php/session.php";
 						<div id="rightarrow"></div>
 						<div class="overflow-wrapper">
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
-								<a href="#1">
+								<a href="#nabidka">
 								<div class="overlay">
 									<div id="akce1" class="titleakce">
 										<?php echo fetchContent("akce1"); ?>
@@ -34,7 +34,7 @@ include_once "php/session.php";
 								</div> </a>
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
-								<a href="#2">
+								<a href="#onas">
 								<div class="overlay">
 									<div id="akce2" class="titleakce">
 										<?php echo fetchContent("akce2"); ?>
@@ -42,7 +42,7 @@ include_once "php/session.php";
 								</div> </a>
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
-								<a href="#3">
+								<a href="#galerie">
 								<div class="overlay">
 									<div id="akce3" class="titleakce">
 										<?php echo fetchContent("akce3"); ?>
@@ -50,7 +50,7 @@ include_once "php/session.php";
 								</div> </a>
 							</div>
 							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
-								<a href="#4">
+								<a href="#nabidka">
 								<div class="overlay">
 									<div id="akce4" class="titleakce">
 										<?php echo fetchContent("akce4"); ?>

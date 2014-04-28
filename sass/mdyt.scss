@@ -185,9 +185,11 @@ nav ul li.selected a {
   overflow: hidden;
   text-align: center;
 }
-.titlegalerie{
+.titlegalerie h2{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5em;
     color: $darkgrey;
     padding-top: 90px;
     margin: 0 auto;    

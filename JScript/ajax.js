@@ -30,7 +30,6 @@ function loadTinyMCE() {
 	});
 }
 
-
-$(document).ready(function() {
+$(document).ready(function() {	
 	loadTinyMCE();
 });

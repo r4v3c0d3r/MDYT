@@ -240,15 +240,17 @@ nav ul li.selected a {
 }
 
 /* line 188, ../sass/mdyt.scss */
-.titlegalerie {
+.titlegalerie h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5em;
   color: #282828;
   padding-top: 90px;
   margin: 0 auto;
 }
 
-/* line 195, ../sass/mdyt.scss */
+/* line 197, ../sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
@@ -257,13 +259,13 @@ nav ul li.selected a {
   height: 660px;
 }
 
-/* line 202, ../sass/mdyt.scss */
+/* line 204, ../sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 206, ../sass/mdyt.scss */
+/* line 208, ../sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -274,34 +276,34 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 215, ../sass/mdyt.scss */
+/* line 217, ../sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 218, ../sass/mdyt.scss */
+/* line 220, ../sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 221, ../sass/mdyt.scss */
+/* line 223, ../sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 224, ../sass/mdyt.scss */
+/* line 226, ../sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 227, ../sass/mdyt.scss */
+/* line 229, ../sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 232, ../sass/mdyt.scss */
+/* line 234, ../sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -311,7 +313,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 240, ../sass/mdyt.scss */
+/* line 242, ../sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -323,7 +325,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 250, ../sass/mdyt.scss */
+/* line 252, ../sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -335,13 +337,13 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 260, ../sass/mdyt.scss */
+/* line 262, ../sass/mdyt.scss */
 #paticka {
   width: 100%;
   height: 160px;
 }
 
-/* line 264, ../sass/mdyt.scss */
+/* line 266, ../sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -350,7 +352,7 @@ a {
   margin: 0 auto;
 }
 
-/* line 270, ../sass/mdyt.scss */
+/* line 272, ../sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;

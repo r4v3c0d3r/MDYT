@@ -16,7 +16,8 @@ setcookie("PovolitZapis", true, time() + 66400);
 	<script type="text/javascript" src="JScript/fileupload.js"></script>
 	<script type="text/javascript" src="JScript/galerymanager.js"></script>
 	<script type="text/javascript" src="JScript/rotator.js"></script>
-	<script type="text/javascript" src="JScript/galerie.js"></script>
+	<script type="text/javascript" src="JScript/galerie.js"></script>	
+	<script type="text/javascript" src="JScript/shadow/shadowbox.js"></script>
 	<!--[if lt IE 9]>
 	<script src="JScript/iefix.js"></script>
 	<div class="error">Používáte přestárlý prohlížeč, prosím <a href="http://www.browserchoice.eu/">aktualizujte jej</a>!</div>
@@ -172,33 +173,22 @@ setcookie("PovolitZapis", true, time() + 66400);
 
 			<section id="kontakt">
 				<h2>Kontaktujte nás</h2>
-				<div class="editable">
+				<div>
 					<h4>Neváhejte napsat</h4>
 				</div>
 				<div class="kontaktniinformace">
-					<div class="kontaktbox" id="telefon">
-						<h5>Telefon</h5>
-						<p>
-							+420 604 804 652
-						</p>
+					<div class="kontaktbox editable" id="telefon">
+<?php echo fetchContent("telefon"); ?>
 					</div>
-					<div class="kontaktbox" id="email">
-						<h5>Email</h5>
-						<p>
-							email@mdyt.cz
-						</p>
+					<div class="kontaktbox editable" id="email">
+<?php echo fetchContent("email"); ?>
 					</div>
-					<div class="kontaktbox" id="adresa">
-						<h5>Adresa</h5>
-						<p>
-							Martin Dytrych
-							<br>
-							Husova 23, Hořice 508 01
-						</p>
+					<div class="kontaktbox editable" id="adresa">
+						<?php echo fetchContent("adresa"); ?>
 					</div>
 				</div>
 				<div class="formular">
-					<form>
+					<form method="POST" action="index.php">
 						<input type="text" name="name" value="Vaše jméno" />
 						<input type="text" name="email" value="Váš email" />
 						<textarea name="message" id="velkevstupnipole">Vaše zpráva</textarea>

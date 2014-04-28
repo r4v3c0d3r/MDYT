@@ -1,6 +1,5 @@
 <?php
 include_once "sqlite.php";
-
 function fetchGaleries() {
 	try {
 		$dbh = initSQLite();
@@ -23,7 +22,7 @@ function fetchPicture($gid, $overlay) {
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
 		foreach ($res as $pic) {
-			echo '<div class="obrazek" style="background-image: url(\'' . $pic['urlobrazku'] . '\');">';
+			echo '<a href="' . $pic['urlobrazku'] . '" rel="shadowbox;height=500;width=840"><div class="obrazek" style="background-image: url(\'' . $pic['urlobrazku'] . '\');">';
 			if (isset($overlay)) {
 				echo '<div class="galeryoverlay">
 								<div class="titlegalerie">
@@ -31,7 +30,7 @@ function fetchPicture($gid, $overlay) {
 								</div>
 							</div>';
 			}
-			echo '</div>';
+			echo '</div></a>';
 
 		}
 	} catch(exception $e) {
@@ -50,4 +49,5 @@ foreach ($res as $galerie) {
 	fetchPicture($galerie['gid'], ($i == 3) ? fetchContent("galerie" . $galerie['gid']) : null);
 	echo '</div>';
 }
+echo '<script>loadShadowBox();</script>';
 ?>
