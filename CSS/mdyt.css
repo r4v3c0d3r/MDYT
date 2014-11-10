@@ -1,46 +1,46 @@
 @charset "CP852";
-/* line 4, ../sass/mdyt.scss */
+/* line 4, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
 }
 
-/* line 8, ../sass/mdyt.scss */
+/* line 8, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h1 {
   padding: 0px 0px 0px 0px;
   font-size: 25px;
   font-weight: 400;
 }
 
-/* line 13, ../sass/mdyt.scss */
+/* line 13, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h2 {
   padding: 20px 0px 20px 0px;
   font-size: 24px;
   font-weight: 100;
 }
 
-/* line 18, ../sass/mdyt.scss */
+/* line 18, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h3 {
   padding: 0px 0px 20px 0px;
   font-size: 24px;
   font-weight: 100;
 }
 
-/* line 23, ../sass/mdyt.scss */
+/* line 23, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h4 {
   padding: 0px 0px 20px 0px;
   font-size: 16px;
   font-weight: 100;
 }
 
-/* line 28, ../sass/mdyt.scss */
+/* line 28, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h5 {
   padding: 0px 0px 0px 0px;
   font-size: 16px;
   font-weight: 100;
 }
 
-/* line 34, ../sass/mdyt.scss */
+/* line 34, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 body {
   background-color: #282828;
   font-family: 'Lato', sans-serif;
@@ -48,7 +48,7 @@ body {
   line-height: 120%;
 }
 
-/* line 40, ../sass/mdyt.scss */
+/* line 40, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 section {
   width: 960px;
   display: inline-block;
@@ -58,13 +58,13 @@ section {
   padding: 60px 20px 20px 20px;
 }
 
-/* line 48, ../sass/mdyt.scss */
+/* line 48, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #page {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 52, ../sass/mdyt.scss */
+/* line 52, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 header {
   width: 960px;
   padding: 20px 20px 0px 20px;
@@ -77,13 +77,13 @@ header {
   /*hehe this will be fun */
 }
 
-/* line 62, ../sass/mdyt.scss */
+/* line 62, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #logo {
   float: left;
   color: #FFFFFF;
 }
 
-/* line 66, ../sass/mdyt.scss */
+/* line 66, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav {
   float: right;
   padding-top: 4px;
@@ -91,17 +91,17 @@ nav {
   font-weight: 400;
 }
 
-/* line 72, ../sass/mdyt.scss */
+/* line 72, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav ul {
   list-style: none;
 }
 
-/* line 75, ../sass/mdyt.scss */
+/* line 75, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav ul li {
   float: left;
 }
 
-/* line 79, ../sass/mdyt.scss */
+/* line 79, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav ul li a {
   display: block;
   margin-left: 40px;
@@ -111,17 +111,17 @@ nav ul li a {
   color: #ede1e1;
 }
 
-/* line 88, ../sass/mdyt.scss */
+/* line 88, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav ul li a:hover {
   color: #ff0000;
 }
 
-/* line 92, ../sass/mdyt.scss */
+/* line 92, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 nav ul li.selected a {
   color: #00ff00;
 }
 
-/* line 96, ../sass/mdyt.scss */
+/* line 96, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #onas {
   background-color: #313131;
   color: #FFFFFF;
@@ -129,7 +129,7 @@ nav ul li.selected a {
   margin-top: -30px;
 }
 
-/* line 102, ../sass/mdyt.scss */
+/* line 102, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .dvasloupce {
   column-count: 2;
   column-gap: 60px;
@@ -138,46 +138,46 @@ nav ul li.selected a {
   text-align: justify;
 }
 
-/* line 109, ../sass/mdyt.scss */
+/* line 109, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .infobox {
   float: left;
   width: 50%;
   padding: 20px 0px 20px 0px;
 }
 
-/* line 114, ../sass/mdyt.scss */
+/* line 114, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .subinfobox {
   position: relative;
   padding: 0px 20px 20px 220px;
 }
 
-/* line 118, ../sass/mdyt.scss */
+/* line 118, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .subinfobox p {
   /*pozicovani odstavce textu v nabidce, idealni automaticky a zarovnat na spodek, ale problematický*/
   padding: 20px 0px 0px 0px;
   text-align: justify;
 }
 
-/* line 123, ../sass/mdyt.scss */
+/* line 123, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #nabidka {
   background-color: #ffffff;
   color: #313131;
   overflow: visible;
 }
 
-/* line 129, ../sass/mdyt.scss */
+/* line 129, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #nabidka img {
   float: left;
 }
 
-/* line 133, ../sass/mdyt.scss */
+/* line 133, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #galerie {
   color: #FFFFFF;
   background-color: #313131;
   height: 1000px;
 }
 
-/* line 138, ../sass/mdyt.scss */
+/* line 138, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .nadpisgalerie {
   position: relative;
   margin: 0px -20px 0px -20px;
@@ -188,7 +188,7 @@ nav ul li.selected a {
   color: #FFFFFF;
 }
 
-/* line 147, ../sass/mdyt.scss */
+/* line 147, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #obsahgalerie {
   position: relative;
   width: 960px;
@@ -200,7 +200,7 @@ nav ul li.selected a {
   color: #313131;
 }
 
-/* line 157, ../sass/mdyt.scss */
+/* line 157, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .obrazek {
   width: 300px;
   height: 300px;
@@ -210,7 +210,15 @@ nav ul li.selected a {
   background-size: cover;
 }
 
-/* line 165, ../sass/mdyt.scss */
+/* line 165, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+.skrytyobrazek {
+  display: none;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+/* line 171, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .thumbwrap {
   width: 130px;
   height: 130px;
@@ -220,7 +228,7 @@ nav ul li.selected a {
   float: left;
 }
 
-/* line 173, ../sass/mdyt.scss */
+/* line 179, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .thumboverlay {
   background-color: rgba(0, 0, 0, 0.33);
   overflow: hidden;
@@ -230,7 +238,7 @@ nav ul li.selected a {
   color: red;
 }
 
-/* line 181, ../sass/mdyt.scss */
+/* line 187, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .galeryoverlay {
   min-height: 100%;
   width: 100%;
@@ -239,7 +247,7 @@ nav ul li.selected a {
   text-align: center;
 }
 
-/* line 188, ../sass/mdyt.scss */
+/* line 194, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .titlegalerie h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -250,7 +258,7 @@ nav ul li.selected a {
   margin: 0 auto;
 }
 
-/* line 197, ../sass/mdyt.scss */
+/* line 203, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
@@ -259,13 +267,13 @@ nav ul li.selected a {
   height: 660px;
 }
 
-/* line 204, ../sass/mdyt.scss */
+/* line 210, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 208, ../sass/mdyt.scss */
+/* line 214, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -276,34 +284,34 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 217, ../sass/mdyt.scss */
+/* line 223, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 220, ../sass/mdyt.scss */
+/* line 226, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 223, ../sass/mdyt.scss */
+/* line 229, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 226, ../sass/mdyt.scss */
+/* line 232, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 229, ../sass/mdyt.scss */
+/* line 235, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 234, ../sass/mdyt.scss */
+/* line 240, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -313,7 +321,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 242, ../sass/mdyt.scss */
+/* line 248, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -325,7 +333,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 252, ../sass/mdyt.scss */
+/* line 258, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -337,13 +345,13 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 262, ../sass/mdyt.scss */
+/* line 268, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #paticka {
   width: 100%;
   height: 160px;
 }
 
-/* line 266, ../sass/mdyt.scss */
+/* line 272, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -352,7 +360,7 @@ a {
   margin: 0 auto;
 }
 
-/* line 272, ../sass/mdyt.scss */
+/* line 278, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;
@@ -360,5 +368,5 @@ a {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  z-index: 90000;
+  z-index: 9000;
 }

@@ -7,13 +7,30 @@ function loadTinyMCE() {
 		force_br_newlines : false,
 		force_p_newlines : false,
 		forced_root_block : '',
-		plugins : 'link save',
+		plugins : 'link save code',
 		add_unload_trigger : false,
 		schema : "html5",
 		inline : true,
 		menubar : false,
-		toolbar : "undo redo | link unlink | save",
-		statusbar : false,
+		toolbar : "undo redo | styleselect | link unlink | code | save",
+		statusbar : true,
+		content_css : "CSS/mdyt.css",
+		style_formats : [{
+			title : 'Normální text',
+			block : 'p'
+		}, {
+			title : 'Tučný text',
+			inline : 'b',
+		}, {
+			title : 'Nadpis 1',
+			block : 'h1'
+		}, {
+			title : 'Nadpis 2',
+			block : 'h2'
+		}, {
+			title : 'Nadpis 3',
+			block : 'h3'
+		}],
 		save_onsavecallback : function() {
 			$.ajax({
 				type : "POST",
@@ -30,6 +47,7 @@ function loadTinyMCE() {
 	});
 }
 
-$(document).ready(function() {	
+
+$(document).ready(function() {
 	loadTinyMCE();
 });

@@ -13,40 +13,44 @@ function fetchGaleries() {
 	}
 }
 
-function fetchPicture($gid, $overlay) {
+function FetchGaleryPictures($gid) {
 	try {
 		$dbh = initSQLite();
-		$stmt = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid ORDER BY RANDOM() LIMIT 1");
+		$stmt = $dbh -> prepare("SELECT * FROM obrazky WHERE gid = :gid ORDER BY RANDOM()");
 		$stmt -> bindParam(':gid', $gid);
 		$stmt -> execute();
 		$res = $stmt -> fetchAll();
 		terminateSQLite();
+		$picCounter = 1;
 		foreach ($res as $pic) {
-			echo '<a href="' . $pic['urlobrazku'] . '" rel="shadowbox;height=500;width=840"><div class="obrazek" style="background-image: url(\'' . $pic['urlobrazku'] . '\');">';
-			if (isset($overlay)) {
-				echo '<div class="galeryoverlay">
+
+			if ($picCounter <= 3) {
+				echo '<a href="' . $pic['urlobrazku'] . '" rel="shadowbox[' . $pic['gid'] . '];height=500;width=840"><div class="obrazek" style="background-image: url(\'' . $pic['urlobrazku'] . '\');">';
+				if ($picCounter == 1 && $pic['gid'] == 1 || $picCounter == 2 && $pic['gid'] == 2 || $picCounter == 3 && $pic['gid'] == 3) {
+					echo '<div class="galeryoverlay">
 								<div class="titlegalerie">
-									<h2>' . $overlay . '</h2>
+									<h2>' . fetchContent("galerie".$pic['gid']) . '</h2>
 								</div>
 							</div>';
+				}
+			} else {
+				echo '<a href="' . $pic['urlobrazku'] . '" rel="shadowbox[' . $pic['gid'] . '];height=500;width=840"><div class="skrytyobrazek" style="background-image: url(\'' . $pic['urlobrazku'] . '\');">';
 			}
-			echo '</div></a>';
 
+			echo '</div></a>';
+			$picCounter++;
 		}
 	} catch(exception $e) {
 		print 'Exception : ' . $e -> getMessage();
 	}
 }
-
 $res = fetchGaleries();
 $i = 0;
 
 foreach ($res as $galerie) {
 	$i++;
 	echo '<div class="album">';
-	fetchPicture($galerie['gid'], ($i == 1) ? fetchContent("galerie" . $galerie['gid']) : null);
-	fetchPicture($galerie['gid'], ($i == 2) ? fetchContent("galerie" . $galerie['gid']) : null);
-	fetchPicture($galerie['gid'], ($i == 3) ? fetchContent("galerie" . $galerie['gid']) : null);
+	FetchGaleryPictures($galerie['gid']);	
 	echo '</div>';
 }
 echo '<script>loadShadowBox();</script>';
