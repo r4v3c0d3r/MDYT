@@ -164,6 +164,8 @@ include_once "php/session.php";
 					<div class="kontaktbox" id="adresa">
 						<?php echo fetchContent("adresa"); ?>
 					</div>
+					<div class="kontaktbox" id="qrcode">
+					</div>
 				</div>
 				<div class="formular">
 					<form method="POST" action="index.php">

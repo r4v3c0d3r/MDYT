@@ -12,7 +12,7 @@ h1 {
 }
 h2 {
     padding: 20px 0px 20px 0px;
-    font-size: 24px;
+    font-size: 42px;
     font-weight: 100;
 }
 h3 {
@@ -97,7 +97,7 @@ nav ul li.selected a {
     background-color: $lightgrey;
     color: #FFFFFF;
     padding: 60px 20px 80px 20px;
-    margin-top: -30px;
+    margin-top: 60px;
 }
 .dvasloupce {
     column-count: 2;
@@ -193,19 +193,19 @@ nav ul li.selected a {
 }
 .titlegalerie h2{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 32px;
     line-height: 1.5em;
     color: $darkgrey;
     padding-top: 90px;
     margin: 0 auto;    
 }
+
 #kontakt {
     width: 100%;
     text-align: center;
     background-color: $lightgrey;
     color: #FFFFFF;
-    height: 660px;
 }
 .kontaktniinformace {
     padding: 40px 20px 20px 20px;
@@ -231,6 +231,16 @@ nav ul li.selected a {
 }
 #adresa {
     background-image: url("/img/icon_home.png");
+}
+#qrcode {
+    position: relative;
+    top: 42px;
+    width: 250px;
+    height: 250px;
+    
+    background-image: url("/img/qrcode.png");
+    background-position: right center;
+    background-size: contain;
 }
 #kontakt .formular {
     width: 50%;
@@ -267,13 +277,18 @@ nav ul li.selected a {
 }
 #paticka {
     width: 100%;
-    height: 160px;
+    height: 40px;
+    padding: 0px;
 }
 a{
     font-family: 'Open Sans', sans-serif;
     color: #00FF00; /*lime*/    
     text-decoration: none;    
     margin: 0 auto;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 .error{
   position: relative;

@@ -15,7 +15,7 @@ h1 {
 /* line 13, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 h2 {
   padding: 20px 0px 20px 0px;
-  font-size: 24px;
+  font-size: 42px;
   font-weight: 100;
 }
 
@@ -126,7 +126,7 @@ nav ul li.selected a {
   background-color: #313131;
   color: #FFFFFF;
   padding: 60px 20px 80px 20px;
-  margin-top: -30px;
+  margin-top: 60px;
 }
 
 /* line 102, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
@@ -250,7 +250,7 @@ nav ul li.selected a {
 /* line 194, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .titlegalerie h2 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 32px;
   line-height: 1.5em;
   color: #282828;
@@ -258,13 +258,12 @@ nav ul li.selected a {
   margin: 0 auto;
 }
 
-/* line 203, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 204, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt {
   width: 100%;
   text-align: center;
   background-color: #313131;
   color: #FFFFFF;
-  height: 660px;
 }
 
 /* line 210, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
@@ -305,13 +304,24 @@ nav ul li.selected a {
 }
 
 /* line 235, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+#qrcode {
+  position: relative;
+  top: 42px;
+  width: 250px;
+  height: 250px;
+  background-image: url("/img/qrcode.png");
+  background-position: right center;
+  background-size: contain;
+}
+
+/* line 245, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 240, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 250, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -321,7 +331,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 248, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 258, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -333,7 +343,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 258, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 268, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -345,13 +355,14 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 268, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 278, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #paticka {
   width: 100%;
-  height: 160px;
+  height: 40px;
+  padding: 0px;
 }
 
-/* line 272, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 283, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -360,7 +371,13 @@ a {
   margin: 0 auto;
 }
 
-/* line 278, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 289, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* line 293, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;

@@ -4,6 +4,7 @@ function loadTinyMCE() {
 		selector : ".editable",
 		language : "cs",
 		theme : "modern",
+		skin : "tundora",
 		force_br_newlines : false,
 		force_p_newlines : false,
 		forced_root_block : '',
@@ -12,12 +13,12 @@ function loadTinyMCE() {
 		schema : "html5",
 		inline : true,
 		menubar : false,
-		toolbar : "undo redo | styleselect | link unlink | code | save",
+		toolbar : "undo redo | styleselect fontsizeselect | bullist | link unlink | code | save",
 		statusbar : true,
 		content_css : "CSS/mdyt.css",
 		style_formats : [{
 			title : 'Normální text',
-			block : 'p'
+			inline : 'p'
 		}, {
 			title : 'Tučný text',
 			inline : 'b',

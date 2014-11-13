@@ -6,7 +6,7 @@ if (isset($_POST['gid']) && $_POST['operace'] == "reloadform") {
 function fetchNewImageForm($gid) {
 	echo '<form class="imageUpload" id="' . $gid . '" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="gid" value="' . $gid . '">
-		<div id="galerie' . $gid . '" class="editable">';
+		<div class="galerynameedit editable" id="galerie' . $gid . '" title="EDITOVATELNÉ, KLIKNĚTE PRO SPUŠTĚNÍ EDITORU.">';
 	echo fetchContent("galerie" . $gid);
 	echo '</div>
 		<br>

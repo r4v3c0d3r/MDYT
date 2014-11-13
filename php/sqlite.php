@@ -63,7 +63,7 @@ function fetchGaleriesManagement() {
 		include "viewthumbs.php";
 		foreach ($res as $galerie) { {
 				echo '<div class="spravaAlba" id="' . $galerie['gid'] . '"><h3>' . fetchContent("galerie" . $galerie['gid']) . '</h3>';
-				echo '<div class="thumbwrap newimage">';
+				echo '<div class="newimage">';
 				fetchNewImageForm($galerie['gid']);
 				echo '</div>';
 				echo '<div class="thumbs" id="' . $galerie['gid'] . '">';

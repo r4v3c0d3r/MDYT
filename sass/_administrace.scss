@@ -1,18 +1,18 @@
-#prihlaseni{   
-margin: 0 auto;
-background-color: $lightgrey;
-width: 400px;
-padding: 60px 20px 20px 20px;
-color: #FFFFFF;
-text-align: left;
+#prihlaseni {
+    margin: 0 auto;
+    background-color:  $lightgrey;
+    width: 400px;
+    padding: 60px 20px 20px 20px;
+    color: #FFFFFF;
+    text-align: left;
 }
-#nadpisprihlaseni{
-  font-size: 25px;
-  font-weight: 400;
+#nadpisprihlaseni {
+    font-size: 25px;
+    font-weight: 400;
 }
 #prihlaseni input {
     font-family: 'Lato', sans-serif;
-    font-style: italic;      
+    font-style: italic;
     color: #8c8c8c;
 }
 #prihlaseni .formular {
@@ -20,9 +20,9 @@ text-align: left;
     height: 100px;
 }
 #prihlaseni input {
-  position: relative;
-  width: 64%; 
-  float: left; 
+    position: relative;
+    width: 64%;
+    float: left;
     padding: 8px 8px 8px 8px;
     margin: 12px 0px 12px 0px;
     font-family: 'Lato', sans-serif;
@@ -30,7 +30,7 @@ text-align: left;
     color: #8c8c8c;
 }
 #prihlaseni #odeslat {
-  float: right;
+    float: right;
     width: 80px;
     background-color: #c7534d;
     color: #FFFFFF;
@@ -38,60 +38,65 @@ text-align: left;
     font-style: normal;
     font-size: 16px;
 }
-#spravagalerie{
-  margin: 0 auto;
-background-color: $lightgrey;
-width: 100%;
-padding: 0px 20px 0px 20px;
-color: #FFFFFF;
-text-align: center;
+#spravagalerie {
+    margin: 0 auto;
+    background-color:  $lightgrey;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    color: #FFFFFF;
+    text-align: center;
 }
-.spravaAlba{
-padding: 0px 20px 0px 20px;
-min-width: 100%;
-min-height: 140px;
-color: #FFFFFF;
-text-align: center;
+.spravaAlba {
+    padding: 0px 20px 0px 20px;
+    min-width: 100%;
+    min-height: 140px;
+    color: #FFFFFF;
+    text-align: center;
 }
-.updatedialog{
- position: absolute;
-  overflow: visible;
-  width: 300px;
-  height: 80px;
-  padding: 20px 20px;
-  margin: 50px 0px 0px -100px;
-  background-color: rgba(0, 0, 0, 0.8);
-  visibility: hidden;
- color: #fff;
-  z-index: 11111;
+.updatedialog {
+    position: absolute;
+    overflow: visible;
+    width: 300px;
+    height: 80px;
+    padding: 20px 20px;
+    margin: 50px 0px 0px -100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    color: #fff;
+    z-index: 11111;
 }
-.button{
-  display: inline-block;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: Pointer;
-  margin-right: 10px;
-  padding: 2px;
-  border: 2px solid rgba(155, 155, 155, 0.8);
-  background-color: rgba(0, 0, 0, 1.0);
+.galerynameedit {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
-.red{
-  color:red;
+.button {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: Pointer;
+    margin-right: 10px;
+    padding: 2px;
+    border: 2px solid rgba(155, 155, 155, 0.8);
+    background-color: rgba(0, 0, 0, 1.0);
 }
-.yellow{
-  color: yellow;
+.red {
+    color: red;
 }
-.spravaAlba h3{
-  padding-top: 40px;
-clear: left;
-width: 100%;
+.yellow {
+    color: yellow;
+}
+.spravaAlba h3 {
+    padding-top: 40px;
+    clear: left;
+    width: 100%;
 }
 
-.newimage{
-  float: left;
-  width: 260px;
-  height: 120px;
-  background-color: $darkgrey;
-  padding: 10px 10px 0px 10px; 
-  text-align: justify; 
+.newimage {
+    float: left;
+    width: 260px;
+    height: 120px;
+    background-color:  $darkgrey;
+    margin: 10px 10px;
+    padding: 10px 10px 0px 10px;
+    text-align: justify;
 }
