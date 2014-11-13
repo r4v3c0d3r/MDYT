@@ -32,6 +32,7 @@ function nextSlide() {
 }
 
 $(document).ready(function() {
+var intervalID = setInterval(function(){nextSlide();}, 10000);
 	$("#leftarrow").click(function() {
 		/*šipka doleva, buď posune doleva, nebo ze začátku na konec*/
 		prevSlide();

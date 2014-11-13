@@ -32,7 +32,7 @@ setcookie("PovolitZapis", true, time() + 66400);
 	<nav>
 		<ul>
 			<li>
-				<a href="#akce">DOMŮ</a>
+				<a href="#spravabanneru">SPRÁVA BANNERU</a>
 			</li>
 			<li>
 				<a href="#onas">O NÁS</a>
@@ -44,60 +44,54 @@ setcookie("PovolitZapis", true, time() + 66400);
 				<a href="#galerie">GALERIE</a>
 			</li>
 			<li>
+				<a href="#spravagalerie">SPRÁVA GALERIE</a>
+			</li>
+			<li>
 				<a href="#kontakt">KONTAKT</a>
+			</li>
+			<li>
+				<a href="http://www.mdyt.cz">Odhlásit</a>
 			</li>
 		</ul>
 	</nav>
-</header>
-			<section id="akce">
-				<div id="slider-wrapper">
-					<div class="inner-wrapper" id="sliderControl">
-						<input checked type="radio" name="slide" class="control" id="Slide1" value="0"/>
-						<label for="Slide1" id="s1"></label>
-						<input type="radio" name="slide" class="control" id="Slide2" value="1"/>
-						<label for="Slide2" id="s2"></label>
-						<input type="radio" name="slide" class="control" id="Slide3" value="2"/>
-						<label for="Slide3" id="s3"></label>
-						<input type="radio" name="slide" class="control" id="Slide4" value="3"/>
-						<label for="Slide4" id="s4"></label>
-						<div id="leftarrow"></div>
-						<div id="rightarrow"></div>
-						<div class="overflow-wrapper">
-							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
+</header>		
+			<section id="spravabanneru">
+				<div class="nadpisgalerie">
+	<h2>Správa rotačního banneru</h2>
+</div>
+				<div class="adminslideimage" style="background-image: url(<?php echo "'" . fetchContent("akce1imgurl") . "'"; ?>)">
 							
-								<div class="overlay">
-									<div id="akce1" class="titleakce editable">
+								<div class="adminoverlay">
+									<div id="akce1" class="admintitleakce editable">
 										<?php echo fetchContent("akce1"); ?>
 									</div>
 								</div> 
 							</div>
-							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
-																<div class="overlay">
-									<div id="akce2" class="titleakce editable">
+							<div class="adminslideimage" style="background-image: url(<?php echo "'" . fetchContent("akce2imgurl") . "'"; ?>)">
+																<div class="adminoverlay">
+									<div id="akce2" class="admintitleakce editable">
 										<?php echo fetchContent("akce2"); ?>
 									</div>
 								</div>
 							</div>
-							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
+							<div class="adminslideimage" style="background-image: url(<?php echo "'" . fetchContent("akce3imgurl") . "'"; ?>)">
 								
-								<div class="overlay">
-									<div id="akce3" class="titleakce editable">
+								<div class="adminoverlay">
+									<div id="akce3" class="admintitleakce editable">
 										<?php echo fetchContent("akce3"); ?>
 									</div>
 								</div>
 							</div>
-							<div class="slideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
+							<div class="adminslideimage" style="background-image: url(<?php echo "'" . fetchContent("akce4imgurl") . "'"; ?>)">
 								
-								<div class="overlay">
-									<div id="akce4" class="titleakce editable">
+								<div class="adminoverlay">
+									<div id="akce4" class="admintitleakce editable">
 										<?php echo fetchContent("akce4"); ?>
 									</div>
 								</div> 
-							</div>
-						</div>
-					</div>
-				</div>
+							</div>						
 			</section>
+		<!---->
 			<section id="onas">
 				<div class="editable" id="nadpisonas">
 				<?php echo fetchContent("nadpisonas"); ?>
@@ -185,6 +179,8 @@ setcookie("PovolitZapis", true, time() + 66400);
 					</div>
 					<div class="kontaktbox editable" id="adresa">
 						<?php echo fetchContent("adresa"); ?>
+					</div>
+										<div class="kontaktbox" id="qrcode">
 					</div>
 				</div>
 				<div class="formular">

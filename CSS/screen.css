@@ -330,15 +330,16 @@ nav ul li.selected a {
   text-align: center;
   background-color: #313131;
   color: #FFFFFF;
+  padding-bottom: 40px;
 }
 
-/* line 210, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 211, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktniinformace {
   padding: 40px 20px 20px 20px;
   float: left;
 }
 
-/* line 214, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 215, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktbox {
   width: 200px;
   height: 60px;
@@ -349,27 +350,27 @@ nav ul li.selected a {
   background-repeat: no-repeat;
 }
 
-/* line 223, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 224, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .kontaktbox p {
   margin-top: 10px;
 }
 
-/* line 226, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 227, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #telefon {
   background-image: url("/img/icon_mobil.png");
 }
 
-/* line 229, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 230, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #email {
   background-image: url("/img/icon_email.png");
 }
 
-/* line 232, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 233, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #adresa {
   background-image: url("/img/icon_home.png");
 }
 
-/* line 235, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 236, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #qrcode {
   position: relative;
   top: 42px;
@@ -380,14 +381,14 @@ nav ul li.selected a {
   background-size: contain;
 }
 
-/* line 245, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 246, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt .formular {
   width: 50%;
   float: right;
   padding: 40px 20px 20px 20px;
 }
 
-/* line 250, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 251, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt input {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -397,7 +398,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 258, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 259, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #velkevstupnipole {
   width: 90%;
   padding: 8px 8px 8px 8px;
@@ -409,7 +410,7 @@ nav ul li.selected a {
   color: #8c8c8c;
 }
 
-/* line 268, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 269, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #kontakt #odeslat {
   float: right;
   margin-right: 16px;
@@ -421,14 +422,14 @@ nav ul li.selected a {
   font-size: 16px;
 }
 
-/* line 278, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 279, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 #paticka {
   width: 100%;
-  height: 40px;
+  height: 96px;
   padding: 0px;
 }
 
-/* line 283, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 284, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 a {
   font-family: 'Open Sans', sans-serif;
   color: #00FF00;
@@ -437,13 +438,13 @@ a {
   margin: 0 auto;
 }
 
-/* line 289, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 290, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-/* line 293, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
+/* line 294, E:/Webjob/Workspace/MDYT/sass/mdyt.scss */
 .error {
   position: relative;
   font-size: 36px;
@@ -511,12 +512,22 @@ p {
   margin: 0 auto;
   background-color: #313131;
   width: 100%;
-  padding: 0px 20px 0px 20px;
+  padding: 80px 20px 0px 20px;
   color: #FFFFFF;
   text-align: center;
 }
 
 /* line 49, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+#spravabanneru {
+  margin: 0 auto;
+  background-color: #313131;
+  width: 100%;
+  padding: 80px 20px 20px 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* line 57, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .spravaAlba {
   padding: 0px 20px 0px 20px;
   min-width: 100%;
@@ -525,7 +536,7 @@ p {
   text-align: center;
 }
 
-/* line 56, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 64, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .updatedialog {
   position: absolute;
   overflow: visible;
@@ -539,13 +550,13 @@ p {
   z-index: 11111;
 }
 
-/* line 68, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 76, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .galerynameedit {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
 
-/* line 72, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 80, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .button {
   display: inline-block;
   font-size: 24px;
@@ -557,24 +568,24 @@ p {
   background-color: black;
 }
 
-/* line 82, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 90, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .red {
   color: red;
 }
 
-/* line 85, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 93, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .yellow {
   color: yellow;
 }
 
-/* line 88, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 96, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .spravaAlba h3 {
   padding-top: 40px;
   clear: left;
   width: 100%;
 }
 
-/* line 94, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
+/* line 102, E:/Webjob/Workspace/MDYT/sass/_administrace.scss */
 .newimage {
   float: left;
   width: 260px;
@@ -788,7 +799,7 @@ p {
   left: 0;
   overflow-y: hidden;
   z-index: 1;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 /* line 172, E:/Webjob/Workspace/MDYT/sass/_slider.scss */
@@ -804,6 +815,37 @@ p {
   height: 100%;
   float: left;
   background-size: cover;
+}
+
+/* line 183, E:/Webjob/Workspace/MDYT/sass/_slider.scss */
+.adminslideimage {
+  width: 100%;
+  height: 450px;
+  float: left;
+  margin: 20px 0px 20px 0px;
+  background-size: cover;
+}
+
+/* line 191, E:/Webjob/Workspace/MDYT/sass/_slider.scss */
+.adminoverlay {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(202, 0, 0, 0.42);
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 8;
+}
+
+/* line 201, E:/Webjob/Workspace/MDYT/sass/_slider.scss */
+.admintitleakce {
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+  padding-top: 160px;
+  font-size: 68px;
+  text-decoration: none;
+  margin: 0 auto;
 }
 
 /* line 1, E:/Webjob/Workspace/MDYT/sass/_shadowbox.scss */
